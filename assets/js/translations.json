@@ -1,0 +1,118 @@
+{
+  "pt": {
+    "language_select": "PT-BR",
+    "language_popup": "Escolha o idioma",
+
+    "redirect_pages_home": "Inicio",
+    "redirect_pages_portfolio": "Portfólio",
+    "redirect_pages_articles": "Artigos",
+    "redirect_pages_about_me": "Sobre Mim",
+
+    "introduction_greeting": "Olá, eu sou Ricardo!",
+    "introduction_description_init": "Sou um",
+    "introduction_description_strong": "desenvolvedor de software", 
+    "introduction_description_final": " dedicado a criar soluções para transformar ideias em realidade.",
+    "introduction_description_occupation": "Desenvolvedor de Software Junior",
+    "introduction_description_city": "Porto Alegre, RS",
+    "introduction_connect_button": "Conecte-se comigo",
+
+    "portfolio_head": "Explore meus projetos",
+    "portfolio_post_one_title": "API REST com Java",
+    "portfolio_post_one_p": "API de cadastro de clientes",
+    "portfolio_post_two_title": "Plataforma de Estudos",
+    "portfolio_post_two_p": "Estudo organizado e eficiente",
+    "portfolio_post_three_title": "Frontend do Spotify",
+    "portfolio_post_three_p": "Réplica autêntica do Spotify",
+    "portfolio_post_view_more": "Explore os trabalhos mais recentes e veja a evolução em cada detalhe.",
+
+    "articles_head": "Artigos mais recentes",
+    "articles_post_one_title": "Iniciando na programação - Um guia para iniciantes",
+    "articles_post_one_p": "Neste artigo, vou compartilhar minha jornada de aprendizado com programação. Abordarei os conceitos básicos, as principais dificuldades que enfrentei e as ferramentas que utilizei para me tornar mais proficiente...",
+    "articles_post_two_title": "Desenvolvendo um sistema bancário simples com Python",
+    "articles_post_two_p": "Neste artigo, vou demonstrar como desenvolver um sistema bancário simples utilizando Python e CustomTkinter. Vou abordar desde a configuração inicial do projeto até a implementação das funcionalidades...",
+    "articles_post_view_more": "Explore os artigos mais recentes.",
+    "articles_post_more_btn": "mais",
+
+    "generic_post_view_more_btn": "Ver mais",
+
+    "contacts_head": "Procurando por um novo talento?"
+  },
+
+  "en": {
+    "language_select": "EN",
+    "language_popup": "Choose language",
+
+    "redirect_pages_home": "Home",
+    "redirect_pages_portfolio": "Portfolio",
+    "redirect_pages_articles": "Articles",
+    "redirect_pages_about_me": "About Me",
+
+    "introduction_greeting": "Hello, I'm Ricardo!",
+    "introduction_description_init": "I am a",
+    "introduction_description_strong": "software developer",
+    "introduction_description_final": " dedicated to creating solutions to turn ideas into reality.",
+    "introduction_description_occupation": "Junior Software Developer",
+    "introduction_description_city": "Porto Alegre, RS",
+    "introduction_connect_button": "Connect with me",
+
+    "portfolio_head": "Explore my projects",
+    "portfolio_post_one_title": "REST API with Java",
+    "portfolio_post_one_p": "Customer registration API",
+    "portfolio_post_two_title": "Study Platform",
+    "portfolio_post_two_p": "Organized and efficient study",
+    "portfolio_post_three_title": "Spotify Frontend",
+    "portfolio_post_three_p": "Authentic Spotify replica",
+    "portfolio_post_view_more": "Explore the latest works and see the evolution in every detail.",
+
+    "articles_head": "Latest articles",
+    "articles_post_one_title": "Getting started with programming - A beginner's guide",
+    "articles_post_one_p": "In this article, I will share my learning journey with programming. I will cover basic concepts, the main difficulties I faced, and the tools I used to become more proficient...",
+    "articles_post_two_title": "Developing a simple banking system with Python",
+    "articles_post_two_p": "In this article, I will demonstrate how to develop a simple banking system using Python and CustomTkinter. I will cover from the initial project setup to implementing the functionalities...",
+    "articles_post_view_more": "Explore the latest articles.",
+    "articles_post_more_btn": "more",
+
+    "generic_post_view_more_btn": "View more",
+
+    "contacts_head": "Looking for new talent?"
+  },
+
+  "es": {
+    "language_select": "ES",
+    "language_popup": "Elige idioma",
+
+    "redirect_pages_home": "Inicio",
+    "redirect_pages_portfolio": "Portafolio",
+    "redirect_pages_articles": "Artículos",
+    "redirect_pages_about_me": "Sobre Mí",
+
+    "introduction_greeting": "¡Hola, soy Ricardo!",
+    "introduction_description_init": "Soy un",
+    "introduction_description_strong": "desarrollador de software",
+    "introduction_description_final": " dedicado a crear soluciones para transformar ideas en realidad.",
+    "introduction_description_occupation": "Desarrollador de Software Junior",
+    "introduction_description_city": "Porto Alegre, RS",
+    "introduction_connect_button": "Conéctate conmigo",
+
+    "portfolio_head": "Explora mis proyectos",
+    "portfolio_post_one_title": "API REST con Java",
+    "portfolio_post_one_p": "API de registro de clientes",
+    "portfolio_post_two_title": "Plataforma de Estudios",
+    "portfolio_post_two_p": "Estudio organizado y eficiente",
+    "portfolio_post_three_title": "Frontend de Spotify",
+    "portfolio_post_three_p": "Réplica auténtica de Spotify",
+    "portfolio_post_view_more": "Explora los trabajos más recientes y ve la evolución en cada detalle.",
+
+    "articles_head": "Artículos recientes",
+    "articles_post_one_title": "Comenzando con la programación - Una guía para principiantes",
+    "articles_post_one_p": "En este artículo, compartiré mi viaje de aprendizaje con la programación. Cubriré conceptos básicos, las principales dificultades que enfrenté y las herramientas que utilicé para volverme más competente...",
+    "articles_post_two_title": "Desarrollando un sistema bancario simple con Python",
+    "articles_post_two_p": "En este artículo, demostraré cómo desarrollar un sistema bancario simple utilizando Python y CustomTkinter. Abordaré desde la configuración inicial del proyecto hasta la implementación de las funcionalidades...",
+    "articles_post_view_more": "Explora los artículos más recientes.",
+    "articles_post_more_btn": "más",
+
+    "generic_post_view_more_btn": "Ver más",
+
+    "contacts_head": "¿Buscando nuevo talento?"
+  }
+}

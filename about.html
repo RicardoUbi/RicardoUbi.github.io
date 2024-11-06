@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Ubirajara | Software Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+    <link rel="stylesheet" href="assets/css/index/styles-index.css">
+</head>
+
+<body>
+    <nav class="container">
+        <h1>RicardoUbi</h1>
+        <ul>
+            <li>
+                <a class="button-home" href="/">
+                    <span class="fa-solid fa-house">
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="button-theme-container">
+                    <button id="theme-toggle" class="button-theme-alternative">
+                        <span id="theme-icon" class="fa-solid fa-moon" style="margin-top: 0;">
+                        </span>
+                    </button>
+                </span>
+            </li>
+            <li><button id="language-toggle"><span class="fa fa-globe"></span> <span id="language_select">PT-BR</span></button></li>
+        </ul>
+    </nav>
+
+    <div id="language-popup" class="popup section">
+        <p id="language_popup">Selecione o idioma:</p>
+        <ul>
+          <li>
+            <button onclick="setLanguage('pt')">
+                <p><strong>Português do Brasil</strong></p>
+                <p>Brazilian Portuguese</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('en')">
+                <p><strong>English</strong></p>
+                <p>English</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('es')">
+                <p><strong>Español de Latinoamérica</strong></p>
+                <p>Latin America Spanish</p>
+            </button>
+            
+        </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <section class="section redirect-pages-section" style="margin-top: 1rem;">
+            <div class="redirects-button-container">
+                <a href="/" class="redirect-button">
+                    <i class="fa-solid fa-house"></i>
+                    <span id="redirect_pages_home">Inicio</span>
+                </a>
+                <a href="/portfolio.html" class="redirect-button">
+                    <i class="fas fa-folder-open"></i>
+                    <span id="redirect_pages_portfolio">Portfólio</span>
+                </a>
+                <a href="/articles.html" class="redirect-button">
+                    <i class="fas fa-newspaper"></i>
+                    <span id="redirect_pages_articles">Artigos</span>
+                </a>
+                <a href="/about.html" class="redirect-button" id="about">
+                    <i class="fas fa-address-card"></i>
+                    <span id="redirect_pages_about_me">Sobre Mim</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section portfolio-section">
+            <div class="portfolio-section-header">
+                <H1>Em desenvolvimento</H1>
+            </div>
+        </section>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/index/script-index.js"></script>
+    </div>
+<footer>
+    <div class="footer-info">
+        <span>Made by Ricardo Ubi.</span>
+        <span>&reg2024</span>
+    </div>
+</footer>
+</body>
+
+</html>

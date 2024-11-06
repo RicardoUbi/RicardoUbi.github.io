@@ -1,0 +1,142 @@
+@media screen and (max-width: 720px) {
+    
+    .introdution-section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0 10px 0;
+    }
+    .introdution-section-header h1 {
+        font-size: 2rem; 
+        margin: 10px 0 10px 0;
+    } 
+    .introdution-section-header p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        margin-right: 4px;
+        margin-left: 9px;
+        text-align: left;
+    }
+
+    .introdution-header-text-info {
+        padding: 6px;
+    }
+
+    .portfolio-section {
+        padding: 50px 0;
+    }
+    
+
+    .portfolio-section-header h1 {
+        font-size: 2rem; 
+    }
+
+    .scroll-container {
+        gap: 2px;
+        padding: 10px;
+        width: 100%;
+        max-width: 1200px;
+        overflow-x:auto;
+        scroll-behavior:auto;
+    }
+
+    .portfolio-cards-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .portfolio-card {
+        width: 18.5rem;
+    }
+
+    .scroll-button {
+        position: absolute;
+        margin-top: 80%;
+        transform: translateY(-50%);
+        padding: 1px 8px 2px 8px;
+        z-index: 1;
+    }
+    
+    #scroll-left {
+        left: 75%;
+    }
+    
+    #scroll-right {
+        right: 8%;
+    }
+
+    .articles-section {
+        padding: 50px 0;
+    }
+
+    .articles-section-header h1 {
+        font-size: 2rem; 
+    }
+
+    .scroll-container {
+        gap: 2px;
+        padding: 10px;
+        width: 100%;
+        max-width: 1200px;
+        overflow-x:auto;
+        scroll-behavior:auto;
+    }
+
+    .articles-cards-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .post {
+        width: 19.5rem;
+        height:25.5rem;
+    }
+    
+    #scroll-articles-left {
+        left: 75%;
+        top: 193%;
+    }
+    
+    #scroll-articles-right {
+        right: 8%;
+        top: 193%;
+    }
+
+
+    .contact-section {
+        margin: auto auto 1rem auto;
+        width: 96%;
+        text-align: center;
+        border-radius: 7px;
+        padding: 1px;
+    }
+
+    .contact-section-header {
+        margin: 20px 0 20px 0;
+    }
+
+    .contact-section-header h1 {
+        font-size: 2.1rem; 
+    }
+
+    .contact-redirect-email {
+        margin: 8px;
+        font-size: 1.3rem;
+    }
+
+    .contact span {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contact-btn-redirect {
+        padding: 10px;
+        margin: 35px 2px;
+        font-size: 0.9rem;
+    }
+    
+}

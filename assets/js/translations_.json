@@ -1,0 +1,155 @@
+{
+    "language_select": {
+        "pt": "PT-BR",
+        "en": "EN",
+        "es": "ES"
+    },
+    "language_popup": {
+        "pt": "Escolha o idioma",
+        "en": "Chose language",
+        "es": "Elige idioma"
+    },
+    "redirect_pages_home": {
+        "pt": "Inicio",
+        "en": "Home",
+        "es": "Inicio"
+    },
+    "redirect_pages_portfolio": {
+        "pt": "Portfólio",
+        "en": "Portfolio",
+        "es": "Portafolio"
+    },
+    "redirect_pages_articles": {
+        "pt": "Artigos",
+        "en": "Articles",
+        "es": "Artículos"
+    },
+    "redirect_pages_about_me": {
+        "pt": "Sobre mim",
+        "en": "About me",
+        "es": "Sobre Mí"
+    },
+    "introduction_greeting": {
+        "pt": "Olá, eu sou Ricardo!",
+        "en": "Hi, i'm Ricardo!",
+        "es": "¡Hola, soy Ricardo!"
+    },
+    "introduction_description_init": {
+        "pt": "Sou um",
+        "en": "I am a",
+        "es": "Soy un"
+    },
+    "introduction_description_strong": {
+        "pt": "desenvolvedor de software",
+        "en": "software developer",
+        "es": "desarrollador de software"
+    },
+    "introduction_description_final": {
+        "pt": "dedicado a criar soluções para transformar ideias em realidade.",
+        "en": "dedicated to creating solutions to turn ideas into reality.",
+        "es": "dedicado a crear soluciones para transformar ideas en realidad."
+    },
+    "introduction_description_occupation": {
+        "pt": "Desenvolvedor de Software Junior",
+        "en": "Junior Software Developer",
+        "es": "Desarrollador de Software Junior"
+    },
+    "introduction_description_city": {
+        "pt": "Porto Alegre, RS",
+        "en": "Porto Alegre, RS",
+        "es": "Porto Alegre, RS"
+    },
+    "introduction_connect_button": {
+        "pt": "Conecte-se comigo",
+        "en": "Conect with me",
+        "es": "Conéctate conmigo"
+    },
+    "portfolio_head": {
+        "pt": "Explore meus projetos",
+        "en": "Explore my projects",
+        "es": "Explora mis proyectos"
+    },
+    "portfolio_post_one_title": {
+        "pt": "API REST com Java",
+        "en": "REST API with Java",
+        "es": "API REST con Java"
+    },
+    "portfolio_post_one_p": {
+        "pt": "API de cadastro de clientes",
+        "en": "Customer registration API",
+        "es": "API de registro de clientes"
+    },
+    "portfolio_post_two_title": {
+        "pt": "Plataforma de Estudos",
+        "en": "Study Platform",
+        "es": "Plataforma de Estudios"
+    },
+    "portfolio_post_two_p": {
+        "pt": "Estudo organizado e eficiente",
+        "en": "Organized and efficient study",
+        "es": "Estudio organizado y eficiente"
+    },
+    "portfolio_post_three_title": {
+        "pt": "Frontend do Spotify",
+        "en": "Spotify Frontend",
+        "es": "Frontend de Spotify"
+    },
+    "portfolio_post_three_p": {
+        "pt": "Réplica autêntica do Spotify",
+        "en": "Authentic Spotify replica",
+        "es": "Réplica auténtica de Spotify"
+    },
+    "portfolio_post_view_more": {
+        "pt": "Explore os trabalhos mais recentes e veja a evolução em cada detalhe.",
+        "en": "Explore the latest works and see the evolution in every detail.",
+        "es": "Explora los trabajos más recientes y ve la evolución en cada detalle."
+    },
+
+    "articles_head": {
+        "pt": "Artigos mais recentes",
+        "en": "Latest articles",
+        "es": "Artículos recientes"
+    },
+    "articles_post_one_title": {
+        "pt": "Iniciando na programação - Um guia para iniciantes",
+        "en": "Getting started with programming - A beginner's guide",
+        "es": "Comenzando con la programación - Una guía para principiantes"
+    },
+    "articles_post_one_p": {
+        "pt": "Neste artigo, vou compartilhar minha jornada de aprendizado com programação. Abordarei os conceitos básicos, as principais dificuldades que enfrentei e as ferramentas que utilizei para me tornar mais proficiente...",
+        "en": "In this article, I will share my learning journey with programming. I will cover basic concepts, the main difficulties I faced, and the tools I used to become more proficient...",
+        "es": "En este artículo, compartiré mi viaje de aprendizaje con la programación. Cubriré conceptos básicos, las principales dificultades que enfrenté y las herramientas que utilicé para volverme más competente..."
+    },
+    "articles_post_two_title": {
+        "pt": "Desenvolvendo um sistema bancário simples com Python",
+        "en": "Developing a simple banking system with Python",
+        "es": "Desarrollando un sistema bancario simple con Python"
+    },
+    "articles_post_two_p": {
+        "pt": "Neste artigo, vou demonstrar como desenvolver um sistema bancário simples utilizando Python e CustomTkinter. Vou abordar desde a configuração inicial do projeto até a implementação das funcionalidades...",
+        "en": "In this article, I will demonstrate how to develop a simple banking system using Python and CustomTkinter. I will cover from the initial project setup to implementing the functionalities...",
+        "es": "En este artículo, demostraré cómo desarrollar un sistema bancario simple utilizando Python y CustomTkinter. Abordaré desde la configuración inicial del proyecto hasta la implementación de las funcionalidades..."
+    },
+    "articles_post_view_more": {
+        "pt": "Explore os artigos mais recentes.",
+        "en": "Explore the latest articles.",
+        "es": "Explora los artículos más recientes."
+    },
+    "articles_post_more_btn": {
+        "pt": "mais",
+        "en": "more",
+        "es": "más"
+    },
+
+    "generic_post_view_more_btn": {
+        "pt": "Ver mais",
+        "en": "View more",
+        "es": "Ver más"
+    },
+
+    "contacts_head": {
+        "pt": "Procurando por um novo talento?",
+        "en": "Looking for new talent?",
+        "es": "¿Buscando nuevo talento?"
+    }
+}

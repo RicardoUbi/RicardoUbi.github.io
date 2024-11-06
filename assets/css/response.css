@@ -1,0 +1,44 @@
+
+/* Ajustes para tablets */
+@media screen and (max-width: 720px) and (max-width: 1015px){
+
+    nav.container {
+        font-size: 0.8rem;
+        width: 95%;
+    }
+    
+    nav ul li {
+        margin-left: 8px;
+        display: flex;
+    }
+    
+    nav a, nav button {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+    
+    .button-home {
+        font-size: 0.7rem;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .redirect-button {
+        padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+        font-size: 0.66rem;
+    }
+
+    .redirect-button i {
+        margin-right: 0.15rem;
+    }
+    
+    .section {
+        max-width: 740px;
+    }
+    
+}
+
+
+
