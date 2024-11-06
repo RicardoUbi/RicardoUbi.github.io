@@ -115,12 +115,25 @@
 
 .scroll-container {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
     padding: 20px;
     width: 100%;
     max-width: 1200px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 6px; /* altura da barra horizontal */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: none; /* Cor de fundo da trilha */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do polegar da barra */
+    border-radius: 10px;
 }
 
 .portfolio-cards-container {
@@ -216,31 +229,6 @@
     padding: auto;
 }
 
-.scroll-button {
-    background-color: #2686C6;
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 25%;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    margin-top: 8%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-#scroll-left {
-    left: 15%;
-}
-
-#scroll-right {
-    right: 15%;
-}
-
-.scroll-button:hover {
-    background-color: #1b65cb;
-}
 
 /* Style Articles Posts*/
 
@@ -340,14 +328,6 @@
     border-radius: 8px; 
     padding: 0.2rem;
     margin-right: 0.3rem;
-}
-
-#scroll-articles-left {
-    left: 15%;
-}
-
-#scroll-articles-right {
-    right: 15%;
 }
 
 .view-more {

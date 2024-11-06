@@ -1,28 +1,3 @@
-// Setup Scroll
-function setupScroll(scrollContainer, scrollLeftButton, scrollRightButton, scrollAmount = 420) {
-    scrollLeftButton.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-
-    scrollRightButton.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-}
-
-// Portfolio
-const scrollContainer = document.querySelector('.scroll-container');
-const scrollLeft = document.getElementById('scroll-left');
-const scrollRight = document.getElementById('scroll-right');
-
-// Articles
-const scrollArticlesContainer = document.querySelector('.scroll-articles-container');
-const scrollArticlesLeft = document.getElementById('scroll-articles-left');
-const scrollArticlesRight = document.getElementById('scroll-articles-right');
-
-setupScroll(scrollContainer, scrollLeft, scrollRight);
-setupScroll(scrollArticlesContainer, scrollArticlesLeft, scrollArticlesRight);
-
-
 // Header Image Movement
 const image = document.querySelector('.introdution-header-image-info');
 const container = document.querySelector('.introdution-container-header-image-info');
@@ -43,7 +18,6 @@ container.addEventListener('mousemove', (event) => {
     image.style.transform = `translate(${translateX}px, ${translateY}px) rotateY(${mouseX * 8}deg) rotateX(${-mouseY * 30}deg)`;
 });
 
-console.log("Iniciando imagem");
 const imageElement = document.getElementById("responsive-image");
 const imageContainer = document.getElementById("introduction-image-responsive");
 
@@ -55,7 +29,6 @@ function updateImageSrc() {
         imageContainer.classList.add("introdution-container-header-image-info-mobile");
         imageElement.classList.remove("introdution-header-image-info");
         imageElement.classList.add("introdution-header-image-info-mobile");
-        console.log("mobile");
     } else {
         // Tela maior, como desktop
         imageElement.src = "assets/files/index/image-introduction.png";
@@ -63,7 +36,6 @@ function updateImageSrc() {
         imageContainer.classList.add("introdution-container-header-image-info");
         imageElement.classList.remove("introdution-header-image-info-mobile");
         imageElement.classList.add("introdution-header-image-info");
-        console.log("pc");
     }
 }
 
