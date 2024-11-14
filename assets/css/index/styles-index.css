@@ -474,20 +474,6 @@
     color: white;
 }
 
-/* Style Footer */
-
-footer {
-    justify-content: center;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-    padding: 1rem 4rem;
-}
-
-
 /* Light-mode */
 
 .light-mode .post {

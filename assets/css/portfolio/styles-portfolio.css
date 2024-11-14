@@ -1,0 +1,143 @@
+/* Style Portfólio */
+
+.portfolio-section {
+    margin: 0rem auto;
+    width: 96%;
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-section-header {
+    display: flex;
+    padding: 20px 0 20px 0;
+    padding: 1rem;
+}
+
+.portfolio-section-header h1 {
+    font-size: 3rem; 
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    width: 100%;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 28rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card-header {
+    position: relative;
+    height: 200px;
+}
+
+.portfolio-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.portfolio-card-body h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.portfolio-card-body p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.portfolio-go-project:hover {
+    background-color: #333;
+}
+
+
+/* Style Contact */
+
+.contact-section {
+    margin: auto auto 1rem auto;
+    width: 96%;
+    text-align: center;
+    background-color: #7A9DAB;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.contact-section-header {
+    margin: 20px 0 20px 0;
+}
+
+.contact-section-header h1 {
+    font-size: 3rem; 
+    color: #fff;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+}
+
+.contact-redirect-email {
+    color: #2a2a2a;
+    text-decoration: none;
+    margin: 80px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-redirect-email:hover {
+    color: #404040;
+}
+
+.contact span {
+    display: block;
+    margin: 10px 0;
+}
+
+.contact-btn-redirect {
+    display: inline-block;
+    background-color: #926758;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 35px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn-redirect:hover {
+    background-color: #9a7263;
+    color: white;
+}
+
+
+
+.light-mode .portfolio-section {
+    background-color: #7A9DAB;
+    padding-bottom: 1.5rem;
+}

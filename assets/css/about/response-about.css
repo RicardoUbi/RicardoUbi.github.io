@@ -1,0 +1,84 @@
+@media screen and (max-width: 720px) {
+    
+    .introdution-section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0 10px 0;
+    }
+
+    .about-section-courses h2,
+    .about-section-academic h2,
+    .about-section-skills h2,
+    .about-section-experience h2,
+    .about-section-header h1 {
+        font-size: 1.8rem; 
+        margin: 2px 0 25px 0;
+    } 
+
+    .skill-category h2,
+    .experience-list h3 {
+        font-size: 1.2rem;
+        margin: 10px 0 10px 0;
+    }
+
+    .academic-list li
+    .experience-list p,
+    .about-section-header p {
+        font-size: 1.1rem; 
+        margin: 5px 0 40px 0;
+    } 
+
+    .skills-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .skills-list li{
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .skills-grid {
+        margin: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        width: 75%;
+    }
+
+    .contact-section {
+        margin: auto auto 1rem auto;
+        width: 96%;
+        text-align: center;
+        border-radius: 7px;
+        padding: 1px;
+    }
+
+    .contact-section-header {
+        margin: 20px 0 20px 0;
+    }
+
+    .contact-section-header h1 {
+        font-size: 2.1rem; 
+    }
+
+    .contact-redirect-email {
+        margin: 8px;
+        font-size: 1.3rem;
+    }
+
+    .contact span {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contact-btn-redirect {
+        padding: 10px;
+        margin: 35px 2px;
+        font-size: 0.9rem;
+    }
+    
+}

@@ -183,6 +183,19 @@ button {
     margin-right: 0.5rem;
 }
 
+/* Style Footer */
+
+footer {
+    justify-content: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 1rem 4rem;
+}
+
 /* Style Light-mode */
 body.light-mode {
     background-color: #f0f0f0;
@@ -207,6 +220,10 @@ body.light-mode .main{
 body.light-mode .redirect-pages-section{
     background-color: #fff;
     color: #333333;
+}
+
+.light-mode .redirect-button.active {
+    background-color: #2a2a2a;
 }
 
 body.light-mode .button-theme-alternative {
