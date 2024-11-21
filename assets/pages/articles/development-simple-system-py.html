@@ -123,45 +123,49 @@
                     <li>
                         <strong>Classe Usuário</strong>: Representa os clientes do banco.
                         <pre><code class="language-python">
-    class Usuario:
-        ''' Classe de Usuario '''
-        def __init__(self, endereco):
-            self.endereco = endereco
-            self.contas = []
-            self.indice_conta = 0
+class Usuario:
+    ''' Classe de Usuario '''
+    def __init__(self, endereco):
+        self.endereco = endereco
+        self.contas = []
+        self.indice_conta = 0
                         </code></pre>
                     </li>
                     <li>
                         <strong>Classe Conta</strong>: Representa as contas do banco.
                         <pre><code class="language-python">
-    class Conta:
-        ''' classe de conta '''
-        def __init__(self, numero, usuario):
-            self._agencia = "0001"
-            self._numero = numero
-            self._saldo = 0
-            self._usuario = usuario
-            self._historico = Historico()
+class Conta:
+    ''' classe de conta '''
+    def __init__(self, numero, usuario):
+        self._agencia = "0001"
+        self._numero = numero
+        self._saldo = 0
+        self._usuario = usuario
+        self._historico = Historico()
                         </code></pre>
                     </li>
                     <li>
                         <strong>Classe ContaCorrente</strong>: Gerencia o saldo e as transações.
                         <pre><code class="language-python">
-    class ContaCorrente(Conta):
-        ''' classe de conta corrente'''
-        def __init__(self, numero, usuario, limite=500, limite_saque=3):
-            super().__init__(numero, usuario)
-            self.limite = limite
-            self.limite_saque = limite_saque
+class ContaCorrente(Conta):
+    ''' classe de conta corrente'''
+    def __init__(self, numero,
+                usuario, 
+                limite=500, 
+                limite_saque=3):
+        super().__init__(numero, 
+                        usuario)
+        self.limite = limite
+        self.limite_saque = limite_saque
                         </code></pre>
                     </li>
                     <li>
                         <strong>Classe Histórico</strong>: Registra as transações realizadas em uma conta.
                         <pre><code class="language-python">
-    class Historico:
-        ''' classe do historico '''
-        def __init__(self):
-            self._transacoes = []
+class Historico:
+    ''' classe do historico '''
+    def __init__(self):
+        self._transacoes = []
                         </code></pre>
                     </li>
                 </ul>
