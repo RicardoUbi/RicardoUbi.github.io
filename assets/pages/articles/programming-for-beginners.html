@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Ubirajara | Software Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/response.css">
+    <link rel="stylesheet" href="../../css/articles/style-article-publi.css">
+</head>
+
+<body>
+    <nav class="container">
+        <h1>RicardoUbi</h1>
+        <ul>
+            <li>
+                <a class="button-home" href="/">
+                    <span class="fa-solid fa-house">
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="button-theme-container">
+                    <button id="theme-toggle" class="button-theme-alternative">
+                        <span id="theme-icon" class="fa-solid fa-moon" style="margin-top: 0;">
+                        </span>
+                    </button>
+                </span>
+            </li>
+            <li><button id="language-toggle"><span class="fa fa-globe"></span> <span id="language_select">PT-BR</span></button></li>
+        </ul>
+    </nav>
+
+    <div id="language-popup" class="popup section">
+        <p id="language_popup">Selecione o idioma:</p>
+        <ul>
+          <li>
+            <button onclick="setLanguage('pt')">
+                <p><strong>Português do Brasil</strong></p>
+                <p>Brazilian Portuguese</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('en')">
+                <p><strong>English</strong></p>
+                <p>English</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('es')">
+                <p><strong>Español de Latinoamérica</strong></p>
+                <p>Latin America Spanish</p>
+            </button>
+            
+        </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <article class="article-container">
+            <img class="post-background-image" src="../../files/index/artigo-iniciando-programacao.png" alt="Imagem da publicação">
+            <header class="article-section-header">
+                <h1>Iniciando na programação - Um guia para iniciantes</h1>
+                <p>Neste artigo, vou compartilhar minha jornada de aprendizado com programação. Abordarei os conceitos básicos, as principais dificuldades que enfrentei e as ferramentas que utilizei para estudar e desenvolver programas.</p>
+            </header>
+
+            <section class="article-section">
+                <h2>O inicio</h2>
+                <p>
+                    Desde pequeno, sempre tive curiosidade sobre a tecnologia, mas foi uma conversa de aula com um professor que me empurrou nesse caminho.
+                    Lembro que estavámos conversando sobre carreira e sucesso profisional, e ele sugeriu que investissemos em certos tópicos que certamente 
+                    nos trariam um diferencial que poderia abrir inúmeras portas, e entre esses tópicos estava a programação. A ideia parecia interessante, mas 
+                    eu não tinha uma noção clara do que esperar. Para mim, assim como para muitos que não estã familiarizados, a programação parecia algo complexo, 
+                    usado por hackers para invadir qualquer sistema com poucos comandos no teclado.
+                </p>
+                <p>
+                    Foi então que, por coincidencia, encontrei uma disciplina optativa chamada "Algoritmos e Lógica de Programação" e decidi me inscrever sem
+                    muita pretensão. Quando comecei as aulas começaram e a professora explicou do que se tratava a materia, a primeira coisa que veio
+                    na minha mente foi: <strong>E agora? Por onde começar?</strong>
+                </p>
+            </section>
+
+            <section class="article-section">
+                <h2>Por onde Começar?</h2>
+                <p>
+                    Foi nesse momento que busquei a ajuda de mentores e professores. E as respostas eram bem semelhantes entre si: Comece pela base, uma base forte vai te 
+                    permitir aprender mais rápido e resolver qualquer problema. A minha recomendação é começar com uma linguagem de programação que seja fácil para você, 
+                    mas como você poderia saber, não é mesmo? Só existe uma resposta, <strong>experimentando</strong>. Testar diferentes linguagens e ferramentas é a unica 
+                    forma de descobrir o que funciona melhor para você.
+                </p>
+                <p>
+                    Então, primeiramente aprenda a usar um editor de código. Isso é essencial para começar a escrever suas primeiras linhas de Programação. Depois disso, o 
+                    proximo passo é escolher uma linguagem. 
+                </p>
+    
+                <h3>Escolhendo a Primeira Linguagem</h3>
+                <p>
+                    Para muitos iniciantes, <strong>Python</strong> pode ser uma excelente escolha. Sua sintaxe é simples e legivel, o que te permite focar
+                    no aprendizado da lógica de programação, em vez de se perder em detalhes técnicos. Além disso, Python é extremamante versátil, sendo usado 
+                    em áreas como desenvolviemnto web, análise de dados, IA, automação, dentre outras.
+                </p>
+                <p>Outras boas opções para iniciantes:</p>
+                <ul>
+                    <li>
+                        <strong>JavaScript</strong>: Afim de conhecer um pouco sobre desenvolvimento web, JavaScript é uma excelente escolha. Ele é essencial para 
+                        criar sites dinâmicos e interativos.
+                    </li>
+                    <li>
+                        <strong>HTML e CSS</strong>: Não são linguagens de programação, mas são fundamentais para quem deseja trabalhar com a parte visual do sistema (front-end). Com eles, você aprende a estruturar e estilizar páginas web.
+                    </li>
+                    <li>
+                        <strong>Scratch</strong>: Conheci essa linguagem em um curso de ciência da computação que fiz, ela é ótima para quem nunca programou antes, especialmente crianças ou pessoas sem nenhum contato com tecnologia. 
+                        Ele ensina lógica de programação de forma visual, com blocos que você arrasta e solta para criar seus próprios projetos.
+                    </li>
+                </ul>
+                <h3>Minhas escolhas</h3>
+                <p>
+                    No meu caso, comecei aprendendo <strong>Java</strong> e <strong>Python</strong> ao mesmo tempo. De alguma forma, essas linguagens
+                    se complementavam de uma fomra interessante na minha cabeça. Enquanto Python me ajudava a compreender a lógica de uma forma intuitiva,
+                    Java me ajudava a entender a importância da estrutura e como a maquina interpreta e executa o código.
+                </p>
+            </section>
+    
+            <section class="article-section">
+                <h2>Entendendo os Conceitos Básicos</h2>
+                <p>Agora que você já escolheu sua linguagem, vou te mostrar os conceitos fundamentais da programação que você deve entender no início. Nesses exemplos estarei utilizando Python:</p>
+                <h3>Variáveis, o que são?</h3>
+                <p>Imagine uma caixa. Você pode colocar qualquer coisa dentro dela: um livro, um boneco, um mouse. Essa caixa, na programação, é uma variavel.</p>
+                <p>Na programação, <strong>uma variavel é como uma caixa onde você armazena dados.</strong> Esses dados podem ser de diversos tipos, palavras, numeros, valores verdadeiros ou falsos, dentre outros.</p>
+                <pre><code class="language-python">
+    # Exemplo em Python
+    variavel = "Olá"
+                </code></pre>
+                <h3>Tipos de Dados</h3>
+                <p>Cada variavel vai armazenar um tipo de dado, inicialmente vamos focar em Strings, Inteiros, Floats, e Boleanos.</p>
+                <ul>
+                    <li>
+                        <strong>Strings</strong>: Sequências de caracteres, como letras, números e símbolos, utilizadas para representar textos. São usadas para armazenar nomes, endereços, mensagens ou qualquer outro tipo de texto.
+                    </li>
+                    <li>
+                        <strong>Inteiros</strong>: Números inteiros, ou seja, números sem virgula. São usados para representar quantidades exatas, como idades, contagens e anos.
+                    </li>
+                    <li>
+                        <strong>Floats</strong>: Números com virgula, utilizados para representar valores decimais. São utilizadas para representar medidas, preços, valores com casas decimais.
+                    </li>
+                    <li>
+                        <strong>Boleanos</strong>: Valores lógicos que representam verdadeiro (true) ou falso (false). São usados para representar condições, como resultados de comparações ou estados.
+                    </li>
+                </ul>
+                <p>Exemplos de Strings, Inteiros, Floats, e Boleanos em código.</p>
+                <pre><code class="language-python">
+    # Exemplo em Python
+    string = "Olá mundo!"
+    int = 60
+    float = 3.75
+    bolean = False
+                </code></pre>
+
+                <h3>Estruturas de Controle</h3>
+                <p>
+                    As estruturas de controle permitem que seu programa tome decisões e repita ações de acordo com as condições determinadas. Em outras palavras, <strong> tornam seu programa mais dinamico e inteligente.</strong> 
+                    Inicialmente vamos falar de If e else, For, e While.
+                </p>
+                <ul>
+                    <li>
+                        <strong>If e else</strong>: É como um cruzamento com uma placa de sinalização: Se uma condição for verdadeira, o programa segue por um caminho, caso contrario, segue por outro. A clausula "else" é usada para definir o que acontece quando a cndição "if" não é verdadeira. 
+                    </li>
+                    <li>
+                        <strong>For</strong>: É como um loop que repete um bloco de código um numero determinado de vezes. É ideal para fazer um contador, por exemplo.
+                    </li>
+                    <li>
+                        <strong>While</strong>: É outro tipo de loop, mas que ao contrario do "For", ele continua se repetindo enquanto uma determinada condição for verdadeira. É util
+                        para quando você não sabe exatamente quantas vezes o loop será executado.
+                    </li>
+                </ul>
+                <pre><code class="language-python">
+    # Exemplo de estrutura condicional
+    # (If e else)
+    idade = 19
+    if idade >= 18:
+        print("Você é maior de idade.")
+    else:
+        print("Você é menor de idade.")
+
+
+    
+    # Exemplo de loop (For)
+    for numero in range(5):
+        print("Contador: ", numero)
+
+
+    
+    # Exemplo de loop (While)
+    numero = 15
+    while numero > 10:
+        print("Regressivo: ", numero)
+        numero -= 1
+                </code></pre>
+                <p>Qual estrutura usar?</p>
+                <ul>
+                    <li>
+                        <strong>If e else</strong>: Quando você precisa tomar uma decisão única.
+                    </li>
+                    <li>
+                        <strong>For</strong>: Quando você sabe o número exato de repetições.
+                    </li>
+                    <li>
+                        <strong>While</strong>: Quando você não sabe o número exato de repetições e precisa de uma condição para parar o loop.
+                    </li>
+                </ul>
+    
+                <h3>Funções</h3>
+                <p>
+                    Uma função é um bloco de código que realiza uma tarefa especifica e que possui um nome. É como uma receita: Você define os ingredientes (parâmetros)
+                    e os passos (ações da função) para preparar um determinado prato (resultado). É uma ótima opção para evitar repetir o mesmo código varias vezes e torna o programa mais fácil de entender e melhorar.
+                </p>
+                <pre><code class="language-python">
+    # Exemplo de função em Python
+    def saudacao(nome):
+        print(f"Olá, {nome}!")
+    
+    saudacao("João")
+                </code></pre>
+                <p>Neste exemplo acima, foi criado uma função e depois a mesma foi chamada pelo seu nome junto do ingrediente (parâmetro), e então retorna a saudação + nome.</p>
+            </section>
+    
+            <section class="article-section">
+                <h2>Dificuldades</h2>
+                <p>
+                    Aprender a programar não é um caminho sem obstáculos. É normal se sentir perdido ou frustrado, acredito que a grande maioria passa ou já passou por isso.
+                </p>
+                <p>
+                    <strong>Se sentir Sobrecarregado</strong> com a quantidade de informações e conceitos novos é um sentimento comum. Programar envolve uma curva de aprendizado 
+                    íngreme, e tentar absorver tudo de uma vez pode ser sufocante. Nesse caso, <strong>quebrar o aprendizado em pequenas partes</strong> e aprofundar gradualmente
+                    é o melhor caminho. E claro, reserve um tempo para descanso.
+                </p>
+                <p>
+                    <strong>A comparação</strong> com outros pode ser uma armadilha. É importante lembrar que cada pessoa tem seu próprio ritmo de aprendizado. <strong>Foque no
+                    seu progresso</strong>: sempre celebre suas pequenas e grandes conquistas e evite se comparar com os outros.
+                </p>
+                <p>
+                    <strong>A falta de prática</strong> é um obstaculo comum. A programação é uma habilidade que se desenvolve com a prática. Separe um tempo todos os dias para
+                    codar, a consistencia é a chave. <strong>Construa pequenos projetos</strong>, isso te ajudará a aplicar os conceitos que você aprendeu e a ver seus progressos na prática.
+                </p>
+            </section>
+    
+            <section class="article-section">
+                <h2>Ferramentas que podem facilitar seu aprendizado</h2>
+                <p>
+                    Durante meu processo inicial de aprendizagem, conheci algumas ferramentas que me ajudaram bastante. Acredito que elas podem te ajudaram
+                    tanto quanto me ajudaram.
+                </p>
+                <h3>Plataformas de Aprendizado</h3>
+                <ul>
+                    <li><strong>FreeCodeCamp</strong>: Excelentes cursos para quem esta iniciando, e o melhor, tudo de graça.</li>
+                    <li><strong>Dio</strong>: Cursos mais aprofundados em projetos práticos, sempre tem algum bootcamp gratuito por lá.</li>
+                    <li><strong>YouTube</strong>: Inúmeros tutoriais gratuitos para iniciantes.</li>
+                    <li><strong>Gemini</strong> e <strong>ChatGPT</strong>: Você consegue tirar quase todas as suas duvidas por lá.</li>
+                </ul>
+    
+                <h3>Ambientes de Desenvolvimento</h3>
+                <ul>
+                    <li><strong>VS Code</strong>: Editor de código poderoso com diversas extensões.</li>
+                    <li><strong>Jupyter Notebook</strong>: Ótimo para aprender Python, especialmente em ciência de dados.</li>
+                    <li><strong>Git e GitHub</strong>: Ferramentas essenciais para versionamento de código.</li>
+                    <li><strong>Replit</strong>: Ótimo ambiente de desenvolvimento online com suporte a diversas linguagens, ou seja, pode ser usado de qualquer lugar.</li>
+                </ul>
+            </section>
+    
+            <section class="article-section">
+                <h2>Conclusão</h2>
+                <p>
+                    Aprender a programar é aprender a criar soluções, é entender o que é ser persistente e principalmente, paciente.
+                </p>
+                <p>
+                    Explore, experimente e mantenha sua curiosidade sempre acesa. A tecnologia está em constante evolução, e a
+                    programação oferece infinitas possibilidades. Então, escolha sua primeira linguagem, construa pequenos projetos,
+                    enfrente todos os desafios e, acima de tudo, <strong>divirta-se!</strong>
+                </p>
+            </section>
+        </article>
+    </div>
+    <footer>
+        <div class="footer-info">
+            <span>Made by Ricardo Ubi.</span>
+            <span>&reg2024</span>
+        </div>
+    </footer>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/index/script-index.js"></script>
+</body>
+
+</html>

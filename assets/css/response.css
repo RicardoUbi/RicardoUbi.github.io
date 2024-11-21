@@ -37,8 +37,37 @@
     .section {
         max-width: 740px;
     }
+
+    .contact-section {
+        margin: auto auto 1rem auto;
+        width: 96%;
+        text-align: center;
+        border-radius: 7px;
+        padding: 1px;
+    }
+
+    .contact-section-header {
+        margin: 20px 0 20px 0;
+    }
+
+    .contact-section-header h1 {
+        font-size: 2.1rem; 
+    }
+
+    .contact-redirect-email {
+        margin: 8px;
+        font-size: 1.3rem;
+    }
+
+    .contact span {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contact-btn-redirect {
+        padding: 10px;
+        margin: 35px 2px;
+        font-size: 0.9rem;
+    }
     
 }
-
-
-

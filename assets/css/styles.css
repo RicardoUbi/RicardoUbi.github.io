@@ -196,6 +196,120 @@ footer {
     padding: 1rem 4rem;
 }
 
+/* Style Colors Tags */
+.tag1 {
+    background-color: rgb(0, 100, 80);
+}
+.tag2 {
+    background-color: rgb(132, 0, 231);
+}
+.tag3 {
+    background: rgb(30, 50, 100);
+}
+
+.tag4 {
+    background: rgb(140, 25, 50);
+}
+
+.tag5 {
+    background: rgb(232, 17, 91);
+}
+.tag6 {
+    background: rgb(83, 122, 161);
+}
+
+.tag7 {
+    background: rgb(142, 102, 172);
+}
+
+.tag8 {
+    background: rgb(20, 138, 8);
+}
+
+.tag9 {
+    background: rgb(30, 50, 100);
+}
+
+.tag10 {
+    background: rgb(233, 20, 41);
+}
+
+.tag11 {
+    background: rgb(80, 55, 80);
+}
+
+.tag12 {
+    background: rgb(216, 64, 0);
+}
+
+.tag13 {
+    background: rgb(186, 93, 7);
+}
+
+.tag14 {
+    background: rgb(0, 30, 80);
+}
+
+.tag15 {
+    background: rgb(60, 30, 80);
+}
+
+/* Style Contact */
+
+.contact-section {
+    margin: auto auto 1rem auto;
+    width: 96%;
+    text-align: center;
+    background-color: #7A9DAB;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.contact-section-header {
+    margin: 20px 0 20px 0;
+}
+
+.contact-section-header h1 {
+    font-size: 3.3rem; 
+    color: #fff;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+}
+
+.contact-redirect-email {
+    color: #2a2a2a;
+    text-decoration: none;
+    margin: 80px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-redirect-email:hover {
+    color: #404040;
+}
+
+.contact span {
+    display: block;
+    margin: 10px 0;
+}
+
+.contact-btn-redirect {
+    display: inline-block;
+    background-color: #926758;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 35px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn-redirect:hover {
+    background-color: #9a7263;
+    color: white;
+}
+
 /* Style Light-mode */
 body.light-mode {
     background-color: #f0f0f0;

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Ubirajara | Software Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/response.css">
+    <link rel="stylesheet" href="../../css/articles/style-article-publi.css">
+</head>
+
+<body>
+    <nav class="container">
+        <h1>RicardoUbi</h1>
+        <ul>
+            <li>
+                <a class="button-home" href="/">
+                    <span class="fa-solid fa-house">
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="button-theme-container">
+                    <button id="theme-toggle" class="button-theme-alternative">
+                        <span id="theme-icon" class="fa-solid fa-moon" style="margin-top: 0;">
+                        </span>
+                    </button>
+                </span>
+            </li>
+            <li><button id="language-toggle"><span class="fa fa-globe"></span> <span id="language_select">PT-BR</span></button></li>
+        </ul>
+    </nav>
+
+    <div id="language-popup" class="popup section">
+        <p id="language_popup">Selecione o idioma:</p>
+        <ul>
+          <li>
+            <button onclick="setLanguage('pt')">
+                <p><strong>Português do Brasil</strong></p>
+                <p>Brazilian Portuguese</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('en')">
+                <p><strong>English</strong></p>
+                <p>English</p>
+            </button>
+            
+        </li>
+          <li>
+            <button onclick="setLanguage('es')">
+                <p><strong>Español de Latinoamérica</strong></p>
+                <p>Latin America Spanish</p>
+            </button>
+            
+        </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <article class="article-container">
+            <img class="post-background-image" src="../../files/index/artigo-desenvolvendo-python.png" alt="Imagem da publicação">
+            <header class="article-section-header">
+                <h1>Desenvolvendo um sistema bancário simples com Python</h1>
+                <p>Neste artigo, vou demonstrar como desenvolver um sistema bancário simples utilizando Python e CustomTkinter. Vou abordar desde a configuração inicial do projeto até a implementação das funcionalidades principais do sistema.</p>
+                <p>Como esta é uma breve demonstração, recomendo que leia o code e o estude, seu link estará disponivel no final da publicação. Se você já possuir conhecimento em programação orientada a objetos será fácil e rápido entender a implementação. Caso não tenha conhecimento de POO (Programação orientada a objetos), recomendo que se aprofunde no tema para facilitar a sua compreensão deste sistema.</p>
+            </header>
+
+            <section class="article-section">
+                <h2>Configurações Iniciais do Ambiente</h2>
+                <p>
+                    Antes de começar, é necessário preparar o ambiente de desenvolvimento. Este projeto utiliza Python 3.12 ou superior. Para configurar:
+                </p>
+                <p>
+                    Crie um ambiente virtual (opcional):
+                </p>
+                <pre><code class="language-python">
+    # Terminal
+    python3 -m venv venv
+                </code></pre>
+                <p>
+                    Ative o ambiente virtual:
+                </p>
+                <pre><code class="language-python">
+    # Terminal 
+    ## Linux
+    source venv/bin/activate
+
+    ## Windows
+    venv\Scripts\activate
+                </code></pre>
+                <p>
+                    Instale o CustomTkinter (Obrigatório):
+                </p>
+                <pre><code class="language-python">
+    # Terminal 
+    pip install customtkinter
+                </code></pre>
+            </section>
+    
+            <section class="article-section">
+                <h2>Estrutura do Sistema</h2>
+                <p>O sistema é dividido em duas partes principais:</p>
+                <ul>
+                    <li>
+                        <strong>Lógica</strong>: Responsável pelo funcionamento interno das funcionalidades.
+                    </li>
+                    <li>
+                        <strong>Interface</strong>: Responsável pela interface gráfica do software.
+                    </li>
+                </ul>
+            </section>
+            <section class="article-section">
+                <h2>Classes e Organização do Sistema</h2>
+                <p>
+                    A base do sistema é composta por três classes principais: Usuário, Conta, ContaCorrente e Histórico.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Classe Usuário</strong>: Representa os clientes do banco.
+                        <pre><code class="language-python">
+    class Usuario:
+        ''' Classe de Usuario '''
+        def __init__(self, endereco):
+            self.endereco = endereco
+            self.contas = []
+            self.indice_conta = 0
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Classe Conta</strong>: Representa as contas do banco.
+                        <pre><code class="language-python">
+    class Conta:
+        ''' classe de conta '''
+        def __init__(self, numero, usuario):
+            self._agencia = "0001"
+            self._numero = numero
+            self._saldo = 0
+            self._usuario = usuario
+            self._historico = Historico()
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Classe ContaCorrente</strong>: Gerencia o saldo e as transações.
+                        <pre><code class="language-python">
+    class ContaCorrente(Conta):
+        ''' classe de conta corrente'''
+        def __init__(self, numero, usuario, limite=500, limite_saque=3):
+            super().__init__(numero, usuario)
+            self.limite = limite
+            self.limite_saque = limite_saque
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Classe Histórico</strong>: Registra as transações realizadas em uma conta.
+                        <pre><code class="language-python">
+    class Historico:
+        ''' classe do historico '''
+        def __init__(self):
+            self._transacoes = []
+                        </code></pre>
+                    </li>
+                </ul>
+                <h3>Integração com CustomTkinter</h3>
+                <p>Cada funcionalidade do sistema tem sua janela própria, garantindo uma organização clara.</p>
+                <ul>
+                    <li>
+                        <strong>1. Interface inicial</strong>: Nesta tela é possivel acessar todas as funcionalidades do software.
+                        <img src="../../files/articles/bancario-1.png">
+                    </li>
+                    <li>
+                        <strong>2. Cadastro de usuarios</strong>: A tela de cadastro permite que novos usuários sejam adicionados ao sistema.
+                        <img src="../../files/articles/bancario-3.png">
+                    </li>
+                    <li>
+                        <strong>3. Abertura de conta</strong>: A funcionalidade permite abrir contas bancarias.
+                        <img src="../../files/articles/bancario-4.png">
+                    </li>
+                    <li>
+                        <strong>4. Listagem de contas</strong>: Nessa tela é possivel ver todas as contas que existem no sistema.
+                        <img src="../../files/articles/bancario-5.png">
+                    </li>
+                    <li>
+                        <strong>5. Deposito </strong>: A funcionalidade de depósito permite que os clientes adicionem dinheiro às suas contas.
+                        <img src="../../files/articles/bancario-6.png">
+                    </li>
+                    <li>
+                        <strong>6. Saque </strong>: A funcionalidade de saque permite que os usuarios retirem fundos de suas contas.
+                        <img src="../../files/articles/bancario-7.png">
+                    </li>
+                    <li>
+                        <strong>7. Extrato </strong>: A funcionalidade de extrato lista todas as transações realizadas.
+                        <img src="../../files/articles/bancario-8.png">
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="article-section">
+                <h2>Conclusão</h2>
+                <p>
+                    Este sistema bancário simples demonstra como combinar conceitos de programação orientadas a objetos e uma interface gráfica moderna para criar um software funcional.
+                    Ele pode ser expandido para incluir mais funcionalidades, como transferências entre contas, autenticação de usuários, e persistência de dados com banco de dados.
+                </p>
+                <p>
+                    Experimente adaptar este sistema às suas necessidades e explore mais recursos do Python e CustomTkinter!
+                </p>
+                <p>Você pode consultar o projeto no Github clicando <a style="text-decoration: none; color: #7A9DAB;" href="https://github.com/RicardoUbi/Python-Collection/tree/main/Python%20Sistema%20Bancario">aqui</a>.</p>
+                <p><strong>Divirta-se!</strong></p>
+                
+            </section>
+        </article>
+    </div>
+    <footer>
+        <div class="footer-info">
+            <span>Made by Ricardo Ubi.</span>
+            <span>&reg2024</span>
+        </div>
+    </footer>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/index/script-index.js"></script>
+</body>
+
+</html>

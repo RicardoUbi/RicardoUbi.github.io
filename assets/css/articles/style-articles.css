@@ -1,0 +1,129 @@
+
+.articles-section {
+    margin: 1rem auto;
+    width: 96%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+}
+
+.articles-section-header {
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+.articles-section-header h1 {
+    font-size: 3rem; 
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 1rem;
+}
+
+.articles-cards-container {
+    width: 100%;
+}
+
+.post {
+    display:flex;
+    background-color: #1f1f1f;
+    border: 1px solid #222328;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    height:12rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.post-background-image{
+    height: 100%;
+    width: 16rem;
+    object-fit: cover;
+}
+
+.post-main{
+    margin: 1rem;
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+.post-date {
+    width: 100%;
+    text-align: end;
+    color: #d4d4d4;
+}
+
+.post-content h3 {
+    text-align: start;
+    margin-top: 0.9rem;
+}
+
+.post-content p {
+    text-align: start;
+    margin-top: 0.5rem;
+    color: #f7f7f7;
+}
+
+.post-content a {
+    color: #fff;
+}
+
+.post-content img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.post-stats {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+    display: flex;
+    width: 100%;
+}
+
+.post-tags {
+    color: #fff;
+    border-radius: 8px; 
+    padding: 0.2rem;
+    margin-right: 0.3rem;
+}
+
+/* Remover estilos padrões do <a> */
+.post a {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: inherit; /* Garante que o link herde a cor do texto pai */
+    display: flex; /* Faz com que o <a> ocupe toda a área do conteúdo */
+    cursor: pointer; /* Mostra o ícone de "mãozinha" ao passar sobre o link */
+}
+
+.light-mode .articles-section-header h1 {
+    color:#1f1f1f;
+}
+
+.light-mode .post {
+    background-color: #F4F7F9;
+    color: #333333;
+    border: none;
+}
+
+.light-mode .post p{
+    color: #333333;
+}
+
+.light-mode .post a{
+    color: #333333;
+}
