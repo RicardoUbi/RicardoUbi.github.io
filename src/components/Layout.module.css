@@ -1,0 +1,18 @@
+.navButton {
+    width: 180px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--mantine-color-winterBlack-0);
+    border-left: 0.5px solid var(--mantine-color-winterBlack-2);
+    border-bottom: 0.5px solid var(--mantine-color-winterBlack-2);
+    color: var(--mantine-color-winterBlack-8);
+    transition: all 0.2s ease;
+}
+
+.navButton:hover {
+    background-color: var(--mantine-color-petrol-7);
+    border: 0.5px solid var(--mantine-color-petrol-7);
+    color: white !important; /* Garante que o texto mude */
+}
