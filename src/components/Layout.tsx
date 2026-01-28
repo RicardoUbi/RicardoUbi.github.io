@@ -1,15 +1,42 @@
 import { Title, Text, Container, Group, Anchor, Popover, ActionIcon, Stack, Box, UnstyledButton } from '@mantine/core';
 import '@mantine/core/styles.css';
-import { IconBriefcase, IconHome, IconNotebook, IconUser, IconWorld } from '@tabler/icons-react';
+import { IconBriefcase, IconHome, IconNotebook, IconUser, IconWorld, type IconProps } from '@tabler/icons-react';
 import { useState, type ReactNode } from 'react';
 import classes from './Layout.module.css';
+import { Link, useLocation } from 'react-router-dom';
 
 interface LayoutProps {
     children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-    const [language, setLanguage] = useState<'pt' | 'en'>('pt');
+    const [language, setLanguage] = useState<'pt' | 'en' | 'es'>('pt');
+    const location = useLocation();
+
+    const languageOptions = {
+        'pt': {
+            'value': 'pt',
+            'label': 'Português do Brasil',
+            'description': 'Brazilian Portuguese'
+        },
+        'en': {
+            'value': 'en',
+            'label': 'English',
+            'description': 'English'
+        },
+        'es': {
+            'value': 'es',
+            'label': 'Español de Latinoamérica',
+            'description': 'Latin America Spanish'
+        },
+    }
+
+    const navItems = [
+        { label: 'Início', icon: IconHome, href: '/' },
+        { label: 'Sobre', icon: IconUser, href: '/sobre' },
+        { label: 'Portfolio', icon: IconBriefcase, href: '/portfolio' },
+        { label: 'Documentos', icon: IconNotebook, href: '/documentos' },
+    ];
 
     return (
         <Box style={styles.root}>
@@ -22,42 +49,66 @@ export default function Layout({ children }: LayoutProps) {
                     </Anchor>
                     <Group gap="xl">
                         {/* LANGUAGE SWITCH */}
-                        <Popover position="bottom-end" withArrow shadow="md">
+                        <Popover position="bottom-end" shadow="md">
                             <Popover.Target>
                                 <ActionIcon variant="subtle" size="lg" style={styles.iconButton}>
                                     <IconWorld size={20} />
                                 </ActionIcon>
                             </Popover.Target>
 
-                            <Popover.Dropdown style={styles.popover}>
-                                <Stack gap="xs">
-                                    <Text
-                                        size="sm"
-                                        style={styles.langOption}
-                                        onClick={() => setLanguage('pt')}
-                                    >
-                                        🇧🇷 Português
-                                    </Text>
-                                    <Text
-                                        size="sm"
-                                        style={styles.langOption}
-                                        onClick={() => setLanguage('en')}
-                                    >
-                                        🇺🇸 English
-                                    </Text>
+                            <Popover.Dropdown style={styles.popover}
+                                aria-label="Selecionar idioma"
+                            >
+                                <Stack gap="xs" style={styles.navButton}>
+                                    {Object.values(languageOptions).map((option) => (
+                                        <UnstyledButton
+                                            key={option.value}
+                                            onClick={() => setLanguage(option.value as 'pt' | 'en' | 'es')}
+                                            style={{
+                                                backgroundColor: language === option.value ? 'var(--mantine-color-winterBlack-7)' : 'transparent',
+                                                padding: '8px',
+                                                borderRadius: '4px',
+                                                width: '100%',
+                                            }}
+                                        >
+                                            <Group justify="space-between">
+                                                <Box>
+                                                    <Text size="sm" style={styles.navLabel}>
+                                                        {option.label}
+                                                    </Text>
+                                                    <Text size="xs" style={styles.navDescription}>
+                                                        {option.description}
+                                                    </Text>
+                                                </Box>
+                                            </Group>
+                                        </UnstyledButton>
+                                    ))}
+
                                 </Stack>
                             </Popover.Dropdown>
-                        </Popover>                    </Group>
+                        </Popover>
+                    </Group>
                 </Group>
             </Box>
 
             <Box style={styles.main}>
                 <Stack gap="xl" style={styles.contentBaseWrapper}>
                     <Group justify="end" gap={0} style={styles.contentNavWrapper}>
-                        <NavIcon icon={<IconHome size={20} />} label="Início" />
-                        <NavIcon icon={<IconUser size={20} />} label="Sobre" />
-                        <NavIcon icon={<IconBriefcase size={20} />} label="Portfolio" />
-                        <NavIcon icon={<IconNotebook size={20} />} label="Blog" />
+                        {navItems.map((item) => {
+                            const isActive = item.href === '/'
+                                ? location.pathname === '/'
+                                : location.pathname.startsWith(item.href);
+
+                            return (
+                                <NavIcon
+                                    key={item.label}
+                                    icon={item.icon}
+                                    label={item.label}
+                                    active={isActive}
+                                    href={item.href}
+                                />
+                            );
+                        })}
                     </Group>
                     <Container style={styles.contentWrapper}>
                         {children}
@@ -76,12 +127,21 @@ export default function Layout({ children }: LayoutProps) {
     );
 }
 
-function NavIcon({ icon, label }: { icon: ReactNode; label: string }) {
+function NavIcon({ icon: Icon, label, href, active }: {
+    icon: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>;
+    label: string;
+    href: string;
+    active: boolean
+}) {
     return (
-        <UnstyledButton className={classes.navButton}>
+        <UnstyledButton
+            component={Link}
+            to={href}
+            className={`${classes.navButton} ${active ? classes.active : ''}`}
+        >
             <Group gap="sm">
-                {icon}
-                <Text size="sm" style={styles.navLabel}>
+                <Icon size={18} />
+                <Text size="sm" fw={active ? 700 : 500}>
                     {label}
                 </Text>
             </Group>
@@ -121,6 +181,7 @@ const styles = {
         justifyContent: 'center',
         paddingTop: '1rem',
         paddingBottom: '1rem',
+        minHeight: '35rem',
     },
 
     contentBaseWrapper: {
@@ -152,7 +213,7 @@ const styles = {
     },
 
     iconButton: {
-        color: 'var(--mantine-color-iceBlue-2)',
+        color: 'var(--mantine-color-iceBlue-0)',
     },
 
     popover: {
@@ -170,4 +231,15 @@ const styles = {
         letterSpacing: '0.03em',
     },
 
+    navDescription: {
+        color: 'var(--mantine-color-winterGray-1)',
+    },
+
+    navButton: {
+        color: 'var(--mantine-color-winterGray-1)',
+        transition: 'all 0.2s ease',
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
+    }
 };

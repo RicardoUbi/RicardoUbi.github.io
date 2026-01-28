@@ -9,10 +9,17 @@
     border-bottom: 0.5px solid var(--mantine-color-winterBlack-2);
     color: var(--mantine-color-winterBlack-8);
     transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--mantine-color-winterGray-9) !important;
+    border: 0.5px solid var(--mantine-color-winterGray-9) !important;
+    color: white !important;
 }
 
 .navButton:hover {
-    background-color: var(--mantine-color-petrol-7);
-    border: 0.5px solid var(--mantine-color-petrol-7);
-    color: white !important; /* Garante que o texto mude */
+    background-color: var(--mantine-color-winterGray-7);
+    border: 0.5px solid var(--mantine-color-winterGray-7);
+    color: white !important;
 }
