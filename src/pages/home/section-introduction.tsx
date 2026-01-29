@@ -3,7 +3,7 @@ import { IconArrowRight } from '@tabler/icons-react';
 
 export default function IntroductionSection() {
     return (
-        <Box py={0}>
+        <Box py={0} mb={"12rem"}>
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing={80} verticalSpacing="xl" >
                 
                 <Box style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
@@ -40,8 +40,7 @@ export default function IntroductionSection() {
                         style={{ 
                             fontSize: '3.5rem', 
                             lineHeight: 0.9,
-                            fontFamily: 'serif',
-                            fontWeight: 400,
+                            fontWeight: 500,
                             textTransform: 'uppercase'
                         }}
                         c="winterBlack.9"

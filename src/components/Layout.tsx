@@ -92,8 +92,8 @@ export default function Layout({ children }: LayoutProps) {
             </Box>
 
             <Box style={styles.main}>
-                <Stack gap="xl" style={styles.contentBaseWrapper}>
-                    <Group justify="end" gap={0} style={styles.contentNavWrapper}>
+                <Stack gap={0} style={styles.contentBaseWrapper}>
+                    <Group justify="end" gap={0} style={{ width: '100%', }}>
                         {navItems.map((item) => {
                             const isActive = item.href === '/'
                                 ? location.pathname === '/'
@@ -110,9 +110,11 @@ export default function Layout({ children }: LayoutProps) {
                             );
                         })}
                     </Group>
+                    <Box style={styles.contentBackground}>
                     <Container style={styles.contentWrapper}>
                         {children}
                     </Container>
+                    </Box>
                 </Stack>
             </Box>
 
@@ -187,17 +189,15 @@ const styles = {
     contentBaseWrapper: {
         width: '80%',
         maxWidth: '72rem',
+    },
+
+    contentBackground: {
         backgroundColor: 'var(--mantine-color-winterBlack-0)',
     },
 
-    contentNavWrapper: {
-        padding: '0 0 2.6rem 0',
-        width: '100%'
-    },
-
     contentWrapper: {
-        padding: '1rem 2rem 2.6rem 2rem',
-        width: '100%'
+        padding: '4rem 2rem 2.6rem 2rem',
+        width: '100%',
     },
 
     footer: {
