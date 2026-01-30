@@ -1,35 +1,61 @@
 import { Box, Group, Stack, Text, UnstyledButton } from "@mantine/core";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { IconBrandLinkedin, IconBrandGithub, IconFileDescription } from "@tabler/icons-react";
+import classes from './home.module.css'; 
 
 export function ContactSection() {
   const socialLinks = [
-    { label: 'GitHub', href: 'https://github.com/ricardoubi' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/ricardoubi' },
-    { label: 'Instagram', href: '#' },
+    { label: 'GitHub', href: 'https://github.com/ricardoubi', icon: IconBrandGithub },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/ricardoubi', icon: IconBrandLinkedin },
+    { label: 'Currículo', href: '#', icon: IconFileDescription },
   ];
 
   return (
-    <Box py="5rem" mt="2rem" style={{ borderTop: '1px solid var(--mantine-color-winterBlack-1)' }}>
-        <Stack gap="xl">
-          <Group gap="xl" justify="space-between" w={{ base: '100%', md: '50%' }}>
-            {socialLinks.map((link) => (
+    <Box py="5rem" mt="4rem" style={{ borderTop: '1px solid var(--mantine-color-winterBlack-1)' }}>
+      <Stack gap="xl" align="center">
+        <Group gap={"6.25rem"} justify="center">
+          {socialLinks.map((link) => {
+            const Icon = link.icon;
+            return (
               <UnstyledButton
                 key={link.label}
                 component="a"
                 href={link.href}
                 target="_blank"
-                style={{ borderBottom: '1px solid transparent', transition: '0.2s' }}
-                onMouseEnter={(e) => e.currentTarget.style.borderBottom = '1px solid var(--mantine-color-winterBlack-9)'}
-                onMouseLeave={(e) => e.currentTarget.style.borderBottom = '1px solid transparent'}
+                className={classes.buttonRoot} // Classe do container
               >
-                <Group gap={4}>
-                  <Text size="sm" fw={600} tt="uppercase" lts="0.1em" c={"var(--mantine-color-winterBlack-9)"}>{link.label}</Text>
-                  <IconArrowUpRight size={14} color="var(--mantine-color-winterBlack-9)"/>
-                </Group>
+                <Stack gap={"0.625rem"} align="center">
+                  <Text className={classes.animatedText} size="md" fw={450}>
+                    {link.label}
+                  </Text>
+                  
+                  <Box className={classes.animatedIcon}>
+                    <Icon size={"2.5rem"} stroke={1.5} />
+                  </Box>
+                </Stack>
               </UnstyledButton>
-            ))}
-          </Group>
-        </Stack>
+            );
+          })}
+        </Group>
+
+        {/* E-mail Button (Manteve-se igual ou pode criar classe também) */}
+        <UnstyledButton
+          component="a"
+          href="mailto:ricardoubi.contato@gmail.com"
+          mt="md"
+        >
+          <Text
+            size="lg"
+            fw={500}
+            c="winterBlack.9"
+            style={{
+              borderBottom: '1.5px solid var(--mantine-color-winterBlack-9)',
+              paddingBottom: '2px'
+            }}
+          >
+            ricardoubi.contato@gmail.com
+          </Text>
+        </UnstyledButton>
+      </Stack>
     </Box>
   );
 }

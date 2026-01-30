@@ -1,0 +1,35 @@
+.buttonRoot {
+  text-decoration: none;
+  color: var(--mantine-color-winterBlack-9);
+}
+
+.animatedText {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right, 
+    var(--mantine-color-winterRed-9) 50%, 
+    var(--mantine-color-winterBlack-9) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  transition: background-position 0.5s ease;
+}
+
+.animatedIcon {
+  transition: all 0.3s ease;
+  color: var(--mantine-color-winterBlack-9);
+}
+
+.buttonRoot:hover .animatedText {
+  background-position: 0 0;
+}
+
+.buttonRoot:hover .animatedIcon {
+  color: var(--mantine-color-winterRed-9);
+  transform: translateY(-3px);
+}

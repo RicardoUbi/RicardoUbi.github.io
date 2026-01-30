@@ -1,13 +1,6 @@
-import { Title, Text, Stack, Box, Card, Group, UnstyledButton, ScrollArea, Image, Divider } from '@mantine/core';
-import { IconArrowUpRight, IconExternalLink } from '@tabler/icons-react';
-
-const PROJECTS = [
-    { title: 'Frontend do Spotify', category: 'Web Design', image: 'src/assets/portfolio/projeto-spotify.gif', link: 'https://spotify-clone-psi.vercel.app' },
-    { title: 'Falcon Seguros Website', category: 'Frontend', image: 'src/assets/portfolio/projeto-falconseguros.png', link: 'https://www.falconseguros.com/' },
-    { title: 'Projeto Gamma', category: 'Mobile', image: 'src/assets/portfolio/projeto-app-orcamento.png', link: 'https://spotify-clone-psi.vercel.app' },
-    { title: 'Projeto Delta', category: 'Frontend', image: 'src/assets/portfolio/projeto-app-orcamento.png', link: 'https://spotify-clone-psi.vercel.app' },
-    { title: 'Projeto Epsilon', category: 'UI/UX', image: 'src/assets/portfolio/projeto-app-orcamento.png', link: 'https://spotify-clone-psi.vercel.app' },
-];
+import { Title, Text, Stack, Box, Card, Group, UnstyledButton, ScrollArea, Image, Divider, Button } from '@mantine/core';
+import { IconArrowRight, IconExternalLink } from '@tabler/icons-react';
+import { PROJECTS } from '../../constants/projects-data';
 
 export function ProjectsSection() {
     return (
@@ -35,7 +28,7 @@ export function ProjectsSection() {
 
             <ScrollArea scrollbars="x" offsetScrollbars scrollbarSize={6} pb="md">
                 <Group wrap="nowrap" gap="md" align="stretch">
-                    {PROJECTS.map((project, index) => (
+                    {PROJECTS.slice(0, 3).map((project, index) => (
                         <Card
                             key={index}
                             component="a"
@@ -95,22 +88,39 @@ export function ProjectsSection() {
                         </Card>
                     ))}
 
-                    {/* NÃO GOSTEI */}
                     <UnstyledButton
                         component="a"
                         href="/projetos"
                         style={{
-                            border: '1.5px solid var(--mantine-color-winterBlack-4)',
+                            flex: '0 0 200px',
                             display: 'flex',
+                            flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            flex: '0 0 250px',
+                            transition: 'all 0.3s ease',
+                            backgroundColor: 'transparent',
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--mantine-color-winterRed-9)';
+                            e.currentTarget.style.backgroundColor = 'var(--mantine-color-winterBlack-0)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.borderColor = 'var(--mantine-color-winterBlack-2)';
+                            e.currentTarget.style.backgroundColor = 'transparent';
                         }}
                     >
-                        <Stack align="center" gap="xs" style={{ color: "var(--mantine-color-winterBlack-9)" }}>
-                            <Text fw={600} tt="uppercase" size="sm">Ver todos</Text>
-                            <IconArrowUpRight size={32} stroke={1.5} />
-                        </Stack>
+                        <Button
+                            variant="outline"
+                            w={{ base: '100%', sm: 'auto' }}
+                            mt="xl"
+                            color="winterBlack.9"
+                            radius={0}
+                            component="a"
+                            href="/projetos"
+                            rightSection={<IconArrowRight size={16} />}
+                        >
+                            Ver todos
+                        </Button>
                     </UnstyledButton>
                 </Group>
             </ScrollArea>
