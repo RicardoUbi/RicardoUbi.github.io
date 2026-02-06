@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "portfolio": "Portfolio",
+    "docs": "Documentos",
+    "menu": "MENU"
+  },
+  "footer": {
+    "copy": "Copyright 2026 © Ricardo Ubirajara - Todos os direitos reservados"
+  },
+
+  "introduction-section": {
+    "role": "Software Developer",
+    "description": "Dedicado a criar soluções para transformar ideias em realidade. Focado em performance e experiência do usuário.",
+    "location": "Porto Alegre, RS",
+    "cta": "Conecte-se"
+  },
+  "portfolio-section": {
+    "title": "Portfolio",
+    "subtitle": "Projetos Selecionados",
+    "cta": "Ver todos"
+  },
+  "documents-section": {
+    "title": "Documentos e Notas",
+    "cta": "Explorar biblioteca completa"
+  }
+}

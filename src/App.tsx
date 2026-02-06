@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Sobre from './pages/about';
 import Portfolio from './pages/portfolio';
 import Documentos from './pages/documents';
+import DocumentPage from './pages/documents/document-details';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/documentos" element={<Documentos />} />
+          <Route path="/documentos/:docId" element={<DocumentPage />} />
           <Route path="*" element={<h1>Página não encontrada</h1>} />
         </Routes>
       </Layout>

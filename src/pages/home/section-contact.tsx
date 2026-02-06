@@ -1,6 +1,6 @@
-import { Box, Group, Stack, Text, UnstyledButton } from "@mantine/core";
+import { Box, Group, Stack, Text, UnstyledButton, Title, SimpleGrid, Flex } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub, IconFileDescription } from "@tabler/icons-react";
-import classes from './home.module.css'; 
+import classes from './home.module.css';
 
 export function ContactSection() {
   const socialLinks = [
@@ -10,52 +10,78 @@ export function ContactSection() {
   ];
 
   return (
-    <Box py="5rem" mt="4rem" style={{ borderTop: '1px solid var(--mantine-color-winterBlack-1)' }}>
-      <Stack gap="xl" align="center">
-        <Group gap={"6.25rem"} justify="center">
-          {socialLinks.map((link) => {
-            const Icon = link.icon;
-            return (
-              <UnstyledButton
-                key={link.label}
-                component="a"
-                href={link.href}
-                target="_blank"
-                className={classes.buttonRoot} // Classe do container
-              >
-                <Stack gap={"0.625rem"} align="center">
-                  <Text className={classes.animatedText} size="md" fw={450}>
-                    {link.label}
-                  </Text>
-                  
-                  <Box className={classes.animatedIcon}>
-                    <Icon size={"2.5rem"} stroke={1.5} />
-                  </Box>
-                </Stack>
-              </UnstyledButton>
-            );
-          })}
-        </Group>
-
-        {/* E-mail Button (Manteve-se igual ou pode criar classe também) */}
-        <UnstyledButton
-          component="a"
-          href="mailto:ricardoubi.contato@gmail.com"
-          mt="md"
+    <Box
+      component="footer"
+      py={{ base: "4rem", md: "6rem" }} // Diminui o padding no mobile
+      mt="8rem"
+      style={{ borderTop: '1px solid var(--mantine-color-winterBlack-1)' }}
+    >
+      {/* Usamos SimpleGrid para controlar a quebra de linha automaticamente */}
+      <SimpleGrid
+        cols={{ base: 1, md: 2 }}
+        spacing={{ base: "xl", md: "lg" }}
+      >
+        {/* Lado do E-mail */}
+        <Flex
+          direction="column"
+          gap="xs"
+          align={{ base: 'center', md: 'flex-start' }}
         >
-          <Text
-            size="lg"
-            fw={500}
-            c="winterBlack.9"
-            style={{
-              borderBottom: '1.5px solid var(--mantine-color-winterBlack-9)',
-              paddingBottom: '2px'
-            }}
-          >
-            ricardoubi.contato@gmail.com
+          <Text fz="0.6rem" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.3">
+            Vamos conversar?
           </Text>
-        </UnstyledButton>
-      </Stack>
-    </Box>
+          <UnstyledButton
+            component="a"
+            href="mailto:ricardoubi.contato@gmail.com"
+            className={classes.emailLink}
+          >
+            <Title
+              order={3}
+              // Diminui a fonte no mobile para não quebrar o layout
+              fz={{ base: "1.4rem", sm: "1.8rem", md: "2rem" }}
+              fw={400}
+              c="winterBlack.9"
+              style={{ lineHeight: 1.1, textAlign: 'center' }}
+            >
+              ricardoubi.contato@gmail.com
+            </Title>
+          </UnstyledButton>
+        </Flex>
+
+        {/* Lado das Redes Sociais */}
+        <Flex
+          direction="column"
+          gap="xs"
+          align={{ base: 'center', md: 'flex-end' }}
+        >
+          <Group
+            gap="lg"
+            justify="center"
+          >
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <UnstyledButton
+                  key={link.label}
+                  component="a"
+                  href={link.href}
+                  target="_blank"
+                  className={classes.socialButton}
+                >
+                  <Stack gap={4} align="center">
+                    <Box className={classes.iconContainer}>
+                      <Icon size={22} stroke={1.2} color="var(--mantine-color-winterBlack-9)" />
+                    </Box>
+                    <Text fz="0.7rem" fw={500} tt="uppercase" lts="0.1em" c="winterBlack.9">
+                      {link.label}
+                    </Text>
+                  </Stack>
+                </UnstyledButton>
+              );
+            })}
+          </Group>
+        </Flex>
+      </SimpleGrid>
+    </Box >
   );
 }

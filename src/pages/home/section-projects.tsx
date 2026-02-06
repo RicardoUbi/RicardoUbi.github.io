@@ -1,90 +1,94 @@
-import { Title, Text, Stack, Box, Card, Group, UnstyledButton, ScrollArea, Image, Divider, Button } from '@mantine/core';
-import { IconArrowRight, IconExternalLink } from '@tabler/icons-react';
+import { Title, Text, Stack, Box, Card, Group, ScrollArea, Image, Divider, UnstyledButton, Button } from '@mantine/core';
+import { IconArrowUpRight, IconArrowRight } from '@tabler/icons-react';
 import { PROJECTS } from '../../constants/projects-data';
+import { useTranslation } from 'react-i18next';
 
 export function ProjectsSection() {
+    const { t } = useTranslation();
     return (
         <Box py="xl" mb="4rem">
-            <Stack gap="xs" mb="xl">
+            {/* Header unificado com o estilo de Documentos */}
+            <Stack gap="xs" mb="3rem">
                 <Text
-                    fw={500}
+                    fw={700}
                     tt="uppercase"
                     lts="0.3em"
-                    size="xs"
-                    c="dimmed">
-                    Portfolio
+                    fz="xs"
+                    c="winterBlack.3">
+                    {t('portfolio-section.title')}
                 </Text>
-                <Divider size="xs" color="winterBlack.4" w={40} />
                 <Title
                     order={2}
                     tt="uppercase"
                     fw={500}
                     fz="2.5rem"
                     c="winterBlack.9"
+                    style={{ lineHeight: 1 }}
                 >
-                    Projetos Selecionados
+                    {t('portfolio-section.subtitle')}
                 </Title>
+                <Divider size="xs" color="winterBlack.4" w={80} />
             </Stack>
 
-            <ScrollArea scrollbars="x" offsetScrollbars scrollbarSize={6} pb="md">
-                <Group wrap="nowrap" gap="md" align="stretch">
-                    {PROJECTS.slice(0, 3).map((project, index) => (
+            <ScrollArea scrollbars="x" offsetScrollbars scrollbarSize={2} pb="xl">
+                <Group wrap="nowrap" gap="xl" align="stretch">
+                    {PROJECTS.slice(0, 4).map((project, index) => (
                         <Card
                             key={index}
                             component="a"
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            padding="lg"
+                            padding={0} // Removemos o padding para a imagem encostar no topo
                             radius={0}
                             withBorder
-                            bg="var(--mantine-color-iceBlue-0)"
+                            bg="white"
                             style={{
-                                borderColor: 'var(--mantine-color-iceBlue-1)',
-                                flex: '0 0 350px',
+                                borderColor: 'var(--mantine-color-winterBlack-1)',
+                                flex: '0 0 380px',
                                 textDecoration: 'none',
-                                transition: 'transform 0.2s ease',
+                                transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
                                 '&:hover': {
-                                    transform: 'translateY(-5px)'
+                                    borderColor: 'var(--mantine-color-winterBlack-9)',
+                                    transform: 'translateY(-8px)',
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.04)',
                                 }
                             }}
                         >
                             <Card.Section>
-                                <Box h={220} style={{ overflow: 'hidden' }}>
+                                <Box h={240} style={{ overflow: 'hidden', position: 'relative' }}>
                                     <Image
                                         src={project.image}
                                         alt={project.title}
-                                        height={220}
+                                        height={240}
                                         fit="cover"
-                                        fallbackSrc="https://placehold.co/600x400?text=Projeto"
+                                        style={{ filter: 'grayscale(0.2)', transition: '0.4s' }}
+                                        className="project-image"
                                     />
                                 </Box>
                             </Card.Section>
 
-                            <Group justify="space-between" mt="md">
-                                <Stack gap={0}>
-                                    <Text
-                                        size="xs"
-                                        tt="uppercase"
-                                        fw={700}
-                                        c="var(--mantine-color-winterBlack-3)"
-                                    >
-                                        {project.category}
-                                    </Text>
-                                    <Text
-                                        fw={500}
-                                        size="lg"
-                                        c="var(--mantine-color-winterBlack-9)"
-                                    >
+                            <Stack p="xl" gap="md" justify="space-between" h="100%">
+                                <Stack gap={4}>
+                                    <Group justify="space-between" align="center">
+                                        <Text size="7px" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
+                                            {project.category}
+                                        </Text>
+                                        <IconArrowUpRight size={14} stroke={1.5} color="var(--mantine-color-winterBlack-2)" />
+                                    </Group>
+
+                                    <Title order={3} fw={400} fz="1.4rem" c="winterBlack.9" mt="xs">
                                         {project.title}
-                                    </Text>
+                                    </Title>
                                 </Stack>
-                                <IconExternalLink
-                                    color="var(--mantine-color-winterBlack-9)"
-                                    size={20}
-                                    stroke={1.5}
-                                />
-                            </Group>
+
+                                <Box>
+                                    <Divider size="1px" color="winterBlack.1" w={30} mb="sm" />
+                                    <Text size="xs" c="winterGray.6" fw={300} style={{ lineHeight: 1.6 }} lineClamp={2}>
+                                        {project.description}
+                                    </Text>
+                                </Box>
+                            </Stack>
                         </Card>
                     ))}
 
@@ -116,10 +120,10 @@ export function ProjectsSection() {
                             color="winterBlack.9"
                             radius={0}
                             component="a"
-                            href="/projetos"
+                            href="/portfolio"
                             rightSection={<IconArrowRight size={16} />}
                         >
-                            Ver todos
+                            {t('portfolio-section.cta')}
                         </Button>
                     </UnstyledButton>
                 </Group>
