@@ -24,6 +24,27 @@
   "documents-section": {
     "title": "Documents and Notes",
     "cta": "Explore complete library"
+  },
+  "contact-section": {
+    "subtitle": "Let's chat?",
+    "curriculum-cta": "Resume"
+  },
+
+  "about-page": {
+    "title": "About Me",
+    "subtitle": "I love creating efficient solutions for complex problems. I'm passionate about developing tools that solve real-world issues and make a positive impact on people's lives. I believe software truly fulfills its purpose when it’s both intuitive and useful.",
+    "experience-section-title": "Experience",
+    "education-section-title": "Education",
+    "skills-section-title": "Skills",
+    "certifications-section-title": "Certifications"
+  },
+  "portfolio-page":{
+    "title": "Portfolio",
+    "search-placeholder": "Filter projects..."
+  },
+  "documents-page": {
+    "title": "Documents and Notes",
+    "search-placeholder": "Filter documents..."
   }
 
 }

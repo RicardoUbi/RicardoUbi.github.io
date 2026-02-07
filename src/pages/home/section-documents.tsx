@@ -8,7 +8,7 @@ export function DocumentsSection() {
     const { t } = useTranslation();
 
     return (
-        <Box py="xl" mb="4rem">
+        <Box py="xl">
             <Stack gap="xs" mb="3rem">
                 <Title
                     order={2}
@@ -66,7 +66,7 @@ export function DocumentsSection() {
                             </Box>
                         </Stack>
 
-                        <Text size="xs" c="winterBlack.5" mt="xl" style={{ lineHeight: 1.6 }}>
+                        <Text size="md" c="winterBlack.5" mt="xl" style={{ lineHeight: 1.6 }}>
                             {doc.description}
                         </Text>
                     </Paper>

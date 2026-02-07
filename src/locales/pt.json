@@ -24,5 +24,26 @@
   "documents-section": {
     "title": "Documentos e Notas",
     "cta": "Explorar biblioteca completa"
+  },
+  "contact-section": {
+    "subtitle": "Vamos conversar?",
+    "curriculum-cta": "Currículo"
+  },
+
+  "about-page": {
+    "title": "Sobre mim",
+    "subtitle": "Adoro criar soluções eficientes para problemas complexos. Minha paixão está em desenvolver ferramentas que resolvam problemas reais e impactem positivamente a vida de quem as utiliza. Acredito que um software cumpre seu papel quando é intuitivo e útil.",
+    "experience-section-title": "Experiência",
+    "education-section-title": "Educação",
+    "skills-section-title": "Habilidades",
+    "certifications-section-title": "Certificaçôes"
+  },
+  "portfolio-page": {
+    "title": "Portfolio",
+    "search-placeholder": "Filtrar projetos..."
+  },
+  "documents-page": {
+    "title": "Documentos e Notas",
+    "search-placeholder": "Filtrar documentos..."
   }
 }

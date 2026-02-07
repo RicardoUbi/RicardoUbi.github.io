@@ -71,7 +71,7 @@ export function ProjectsSection() {
                             <Stack p="xl" gap="md" justify="space-between" h="100%">
                                 <Stack gap={4}>
                                     <Group justify="space-between" align="center">
-                                        <Text size="7px" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
+                                        <Text size="0.6rem" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
                                             {project.category}
                                         </Text>
                                         <IconArrowUpRight size={14} stroke={1.5} color="var(--mantine-color-winterBlack-2)" />
@@ -84,7 +84,7 @@ export function ProjectsSection() {
 
                                 <Box>
                                     <Divider size="1px" color="winterBlack.1" w={30} mb="sm" />
-                                    <Text size="xs" c="winterGray.6" fw={300} style={{ lineHeight: 1.6 }} lineClamp={2}>
+                                    <Text size="md" c="winterGray.6" fw={300} style={{ lineHeight: 1.6 }} lineClamp={2}>
                                         {project.description}
                                     </Text>
                                 </Box>

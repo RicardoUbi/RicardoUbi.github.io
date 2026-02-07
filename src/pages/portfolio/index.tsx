@@ -2,9 +2,11 @@ import { useState, useMemo } from 'react';
 import { Title, Text, SimpleGrid, Card, Image, Group, Stack, Box, Divider, TextInput } from '@mantine/core';
 import { PROJECTS } from '../../constants/projects-data';
 import { IconSearch, IconArrowUpRight } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Portfolio() {
   const [search, setSearch] = useState('');
+  const { t } = useTranslation();
 
   const filteredProjects = useMemo(() => {
     return PROJECTS.filter((project) =>
@@ -19,20 +21,20 @@ export default function Portfolio() {
       <Group justify="space-between" align="flex-end">
         <Stack gap="xs">
           <Title order={2} c="winterBlack.9" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-            Portfolio
+            {t('portfolio-page.title')}
           </Title>
           <Divider size="xs" color="winterBlack.4" w={60} />
         </Stack>
 
         <TextInput
-          placeholder="Filtrar projetos..."
+          placeholder={t('portfolio-page.search-placeholder')}
           variant="unstyled"
           leftSection={<IconSearch size={18} stroke={1.5} />}
           value={search}
           onChange={(event) => setSearch(event.currentTarget.value)}
-          style={{ 
+          style={{
             borderBottom: '1px solid var(--mantine-color-winterBlack-2)',
-            minWidth: '280px' 
+            minWidth: '280px'
           }}
         />
       </Group>
@@ -68,9 +70,9 @@ export default function Portfolio() {
                     alt={project.title}
                     height={280}
                     fit="cover"
-                    style={{ 
-                      filter: 'grayscale(0.3)', 
-                      transition: '0.5s' 
+                    style={{
+                      filter: 'grayscale(0.3)',
+                      transition: '0.5s'
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.filter = 'grayscale(0)'}
                     onMouseLeave={(e) => e.currentTarget.style.filter = 'grayscale(0.3)'}
@@ -81,7 +83,7 @@ export default function Portfolio() {
               <Stack p="xl" gap="md">
                 <Stack gap={4}>
                   <Group justify="space-between">
-                    <Text size="7px" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
+                    <Text size="0.7rem" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
                       {project.category}
                     </Text>
                     <IconArrowUpRight size={16} stroke={1.5} color="winterBlack.2" />
@@ -93,7 +95,7 @@ export default function Portfolio() {
 
                 <Box>
                   <Divider size="1px" color="winterBlack.9" w={30} mb="sm" />
-                  <Text size="xs" c="winterBlack.5" style={{ lineHeight: 1.6 }} fw={300}>
+                  <Text size="md" c="winterBlack.5" style={{ lineHeight: 1.6 }} fw={300}>
                     {project.description}
                   </Text>
                 </Box>

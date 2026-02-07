@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { Title, Text, Stack, Group, Divider, TextInput, SimpleGrid, Paper, Box } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 import { DOCS } from '../../constants/documents-data';
+import { useTranslation } from 'react-i18next';
 
 export default function Documentos() {
   const [search, setSearch] = useState('');
+  const { t } = useTranslation();
 
   const filteredDocs = DOCS.filter(doc =>
     doc.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -16,13 +18,13 @@ export default function Documentos() {
       <Group justify="space-between" >
         <Stack gap="xs">
           <Title order={2} c="winterBlack.9" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-            Documentos e Notas
+            {t('documents-page.title')}
           </Title>
           <Divider size="xs" color="winterBlack.4" w={60} />
         </Stack>
 
         <TextInput
-          placeholder="Filtrar por título ou tag..."
+          placeholder={t('documents-page.search-placeholder')}
           variant="unstyled"
           leftSection={<IconSearch size={18} stroke={1.5} />}
           value={search}
@@ -95,7 +97,7 @@ export default function Documentos() {
               <Box>
                 <Divider size="1px" color="winterBlack.9" w={30} mb="sm" />
                 <Text
-                  size="xs"
+                  size="md"
                   fw={400}
                   c="winterBlack.5"
                   style={{

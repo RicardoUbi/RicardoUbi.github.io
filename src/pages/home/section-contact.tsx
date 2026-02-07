@@ -1,12 +1,15 @@
 import { Box, Group, Stack, Text, UnstyledButton, Title, SimpleGrid, Flex } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub, IconFileDescription } from "@tabler/icons-react";
 import classes from './home.module.css';
+import { useTranslation } from "react-i18next";
 
 export function ContactSection() {
+  const { t } = useTranslation();
+
   const socialLinks = [
     { label: 'GitHub', href: 'https://github.com/ricardoubi', icon: IconBrandGithub },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/ricardoubi', icon: IconBrandLinkedin },
-    { label: 'Currículo', href: '#', icon: IconFileDescription },
+    { label: t('contact-section.curriculum-cta'), href: '#', icon: IconFileDescription },
   ];
 
   return (
@@ -28,7 +31,7 @@ export function ContactSection() {
           align={{ base: 'center', md: 'flex-start' }}
         >
           <Text fz="0.6rem" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.3">
-            Vamos conversar?
+            {t('contact-section.subtitle')}
           </Text>
           <UnstyledButton
             component="a"
