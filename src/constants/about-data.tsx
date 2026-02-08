@@ -14,6 +14,7 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
     {
+        id: 'colbiz',
         role: 'Desenvolvedor de Software',
         company: 'Colbiz - Collaborative Business',
         period: 'Dez 2024 - O momento',
@@ -21,6 +22,7 @@ export const EXPERIENCES = [
         tags: ['React', 'TypeScript', 'Node.js', 'C#', 'SQL Server'],
     },
     {
+        id: 'fadema',
         role: 'Desenvolvedor Bolsista',
         company: 'FADEMA',
         period: 'Mai 2023 - Nov 2023',
@@ -31,11 +33,13 @@ export const EXPERIENCES = [
 
 export const EDUCATION = [
     {
+        id: 'ufrgs',
         degree: 'Ciência da Computação',
         institution: 'UFRGS',
         period: 'Em andamento',
     },
     {
+        id: 'ifsul',
         degree: 'Técnico em Mecânica',
         institution: 'IFSUL - Campus Sapucaia do Sul',
         period: '2020 - 2024',

@@ -89,14 +89,14 @@ export default function Portfolio() {
                     <IconArrowUpRight size={16} stroke={1.5} color="winterBlack.2" />
                   </Group>
                   <Title order={3} fw={400} fz="1.6rem" c="winterBlack.9">
-                    {project.title}
+                    {t(`projects-data.${project.id}.title`)}
                   </Title>
                 </Stack>
 
                 <Box>
                   <Divider size="1px" color="winterBlack.9" w={30} mb="sm" />
                   <Text size="md" c="winterBlack.5" style={{ lineHeight: 1.6 }} fw={300}>
-                    {project.description}
+                    {t(`projects-data.${project.id}.description`)}
                   </Text>
                 </Box>
               </Stack>

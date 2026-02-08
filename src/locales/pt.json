@@ -9,7 +9,6 @@
   "footer": {
     "copy": "Copyright 2026 © Ricardo Ubirajara - Todos os direitos reservados"
   },
-
   "introduction-section": {
     "role": "Software Developer",
     "description": "Dedicado a criar soluções para transformar ideias em realidade. Focado em performance e experiência do usuário.",
@@ -29,7 +28,7 @@
     "subtitle": "Vamos conversar?",
     "curriculum-cta": "Currículo"
   },
-
+  
   "about-page": {
     "title": "Sobre mim",
     "subtitle": "Adoro criar soluções eficientes para problemas complexos. Minha paixão está em desenvolver ferramentas que resolvam problemas reais e impactem positivamente a vida de quem as utiliza. Acredito que um software cumpre seu papel quando é intuitivo e útil.",
@@ -45,5 +44,71 @@
   "documents-page": {
     "title": "Documentos e Notas",
     "search-placeholder": "Filtrar documentos..."
+  },
+
+  "projects-data": {
+    "falcon-seguros": {
+      "title": "Falcon Seguros: Seguro Viagem",
+      "description": "Plataforma comercial de seguros de viagem em produção. Desenvolvida com React, TypeScript e Node.js, focando em performance, SEO avançado e estratégias de conversão de leads."
+    },
+    "online-chat": {
+      "title": "Estudo de Chat Online",
+      "description": "Aplicação de chat em tempo real utilizando Node.js e Socket.io. Implementa comunicação bidirecional e arquitetura cliente-servidor para mensagens instantâneas com interface responsiva."
+    },
+    "image-classifier": {
+      "title": "Classificador de Imagens de Cães e Gatos",
+      "description": "Desenvolvimento de uma Rede Neural Convolucional (CNN) com TensorFlow e Keras. Alcançou 86% de precisão na classificação automatizada de imagens através de Deep Learning."
+    },
+    "medical-analysis": {
+      "title": "Análise de Dados Médicos",
+      "description": "Análise estatística e visualização de dados médicos com Pandas e Seaborn. Processamento de grandes datasets para identificar correlações entre estilo de vida e doenças cardíacas."
+    },
+    "web3-token": {
+      "title": "Token Padrão Web3",
+      "description": "Criação e deploy de um Smart Contract ERC20 (RICO Coin) em Solidity. Implementa lógica de suprimento, transferências e governança em redes compatíveis com Ethereum."
+    },
+    "barcode-api": {
+      "title": "API Geradora de Código de Barras",
+      "description": "API escalável em Flask para geração de códigos de barras. Arquitetura robusta com testes unitários (Pytest), validação de dados com Cerberus e linting estrito com Pylint."
+    },
+    "apple-study": {
+      "title": "Estudo de Interface Apple",
+      "description": "Interface interativa de alta fidelidade que simula o configurador do Apple Watch. Foco em manipulação de DOM, estados de UI e animações fluidas em JavaScript puro."
+    },
+    "spotify-study": {
+      "title": "Estudo de Interface Spotify",
+      "description": "Clone de interface focado em pixel-perfect design e UX. Implementa funcionalidades de busca e navegação dinâmica integrando conceitos de frontend moderno e APIs."
+    },
+    "river-inf": {
+      "title": "River-INF: Estudo de Engine",
+      "description": "Um shooter vertical clássico desenvolvido em C com Raylib para a UFRGS. Implementa persistência de dados binários, lógica modular e gerenciamento de estados de jogo."
+    }
+  },
+
+  "about-data": {
+    "experiences": {
+      "colbiz": {
+        "role": "Desenvolvedor de Software",
+        "period": "Dez 2024 - O momento",
+        "description": "Atuação no ciclo completo de software, desde a concepção de novas aplicações até a manutenção evolutiva de sistemas legados. Foco em resolução de problemas complexos e implementação de funcionalidades escaláveis."
+      },
+      "fadema": {
+        "role": "Desenvolvedor Bolsista",
+        "period": "Mai 2023 - Nov 2023",
+        "description": "Automação de tradução de software utilizando Python, Selenium e integração com Google Sheets."
+      }
+    },
+    "education": {
+      "ufrgs": {
+        "institution": "UFRGS - Universidade Federal do Rio Grande do Sul",
+        "degree": "Ciência da Computação",
+        "period": "Em andamento"
+      },
+      "ifsul": {
+        "institution": "IFSUL - Instituto Federal Sul-rio-grandense",
+        "degree": "Técnico em Mecânica",
+        "period": "2020 - 2024"
+      }
+    }
   }
 }

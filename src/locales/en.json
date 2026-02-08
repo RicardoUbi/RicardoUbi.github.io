@@ -9,7 +9,6 @@
   "footer": {
     "copy": "Copyright 2026 © Ricardo Ubirajara - All rights reserved"
   },
-
   "introduction-section": {
     "role": "Software Developer",
     "description": "Dedicated to building solutions that turn ideas into reality. Focused on performance and user experience.",
@@ -29,7 +28,6 @@
     "subtitle": "Let's chat?",
     "curriculum-cta": "Resume"
   },
-
   "about-page": {
     "title": "About Me",
     "subtitle": "I love creating efficient solutions for complex problems. I'm passionate about developing tools that solve real-world issues and make a positive impact on people's lives. I believe software truly fulfills its purpose when it’s both intuitive and useful.",
@@ -38,13 +36,78 @@
     "skills-section-title": "Skills",
     "certifications-section-title": "Certifications"
   },
-  "portfolio-page":{
+  "portfolio-page": {
     "title": "Portfolio",
     "search-placeholder": "Filter projects..."
   },
   "documents-page": {
     "title": "Documents and Notes",
     "search-placeholder": "Filter documents..."
-  }
+  },
 
+  "projects-data": {
+    "falcon-seguros": {
+      "title": "Falcon Seguros: Travel Insurance",
+      "description": "A commercial travel insurance platform in production. Developed with React, TypeScript, and Node.js, focusing on performance, advanced SEO, and lead conversion strategies."
+    },
+    "online-chat": {
+      "title": "Online Chat Study",
+      "description": "A real-time chat application using Node.js and Socket.io. Implements bidirectional communication and client-server architecture for instant messaging with a responsive interface."
+    },
+    "image-classifier": {
+      "title": "Dog and Cat Image Classifier",
+      "description": "Development of a Convolutional Neural Network (CNN) with TensorFlow and Keras. Achieved 86% accuracy in automated image classification through Deep Learning."
+    },
+    "medical-analysis": {
+      "title": "Medical Data Analysis",
+      "description": "Statistical analysis and data visualization of medical records using Pandas and Seaborn. Processing large datasets to identify correlations between lifestyle and heart disease."
+    },
+    "web3-token": {
+      "title": "Web3 Standard Token",
+      "description": "Creation and deployment of an ERC20 Smart Contract (RICO Coin) in Solidity. Implements supply logic, transfers, and governance on Ethereum-compatible networks."
+    },
+    "barcode-api": {
+      "title": "Barcode Generator API",
+      "description": "Scalable Flask API for barcode generation. Robust architecture with unit testing (Pytest), data validation with Cerberus, and strict linting with Pylint."
+    },
+    "apple-study": {
+      "title": "Apple Products Interface Study",
+      "description": "High-fidelity interactive interface simulating the Apple Watch configurator. Focuses on DOM manipulation, UI states, and fluid animations in pure JavaScript."
+    },
+    "spotify-study": {
+      "title": "Spotify Interface Study",
+      "description": "Interface clone focused on pixel-perfect design and UX. Implements search and dynamic navigation functionalities, integrating modern frontend concepts and APIs."
+    },
+    "river-inf": {
+      "title": "River-INF: Engine Study",
+      "description": "A classic vertical shooter developed in C with Raylib for UFRGS. Implements binary data persistence, modular logic, and game state management."
+    }
+  },
+
+  "about-data": {
+    "experiences": {
+      "colbiz": {
+        "role": "Software Developer",
+        "period": "Dec 2024 - Present",
+        "description": "Working across the full software development lifecycle, from designing new applications to the evolutionary maintenance of legacy systems. Focused on solving complex problems and implementing scalable features."
+      },
+      "fadema": {
+        "role": "Scholarship Developer",
+        "period": "May 2023 - Nov 2023",
+        "description": "Software translation automation using Python, Selenium, and integration with Google Sheets."
+      }
+    },
+    "education": {
+      "ufrgs": {
+        "institution": "UFRGS - Federal University of Rio Grande do Sul",
+        "degree": "Computer Science",
+        "period": "In progress"
+      },
+      "ifsul": {
+        "institution": "IFSUL - Sul-Rio-Grandense Federal Institute",
+        "degree": "Mechanical Technician",
+        "period": "2020 - 2024"
+      }
+    }
+  }
 }

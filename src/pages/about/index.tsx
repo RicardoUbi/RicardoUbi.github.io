@@ -34,14 +34,14 @@ export default function Sobre() {
             {EXPERIENCES.map((exp, index) => (
               <Box key={index}>
                 <Group justify="space-between" align="flex-start" mb={4}>
-                  <Text fw={500} fz="1.1rem" c="winterBlack.9">{exp.role}</Text>
-                  <Text ff="monospace" fz="0.8rem" c="winterBlack.3">{exp.period}</Text>
+                  <Text fw={500} fz="1.1rem" c="winterBlack.9">{t(`about-data.experiences.${exp.id}.role`)}</Text>
+                  <Text ff="monospace" fz="0.8rem" c="winterBlack.3">{t(`about-data.experiences.${exp.id}.period`)}</Text>
                 </Group>
                 <Text fz="xs" fw={700} tt="uppercase" lts="0.1em" c="winterBlack.4" mb="md">
                   {exp.company}
                 </Text>
                 <Text size="md" c="winterBlack.6" style={{ lineHeight: 1.6 }} fw={300}>
-                  {exp.description}
+                  {t(`about-data.experiences.${exp.id}.description`)}
                 </Text>
               </Box>
             ))}
@@ -59,9 +59,9 @@ export default function Sobre() {
           <Stack gap="xl">
             {EDUCATION.map((edu, index) => (
               <Box key={index}>
-                <Text fw={500} fz="1.1rem" c="winterBlack.9">{edu.degree}</Text>
-                <Text size="sm" c="winterBlack.5" mt={4}>{edu.institution}</Text>
-                <Text ff="monospace" size="0.8rem" c="winterBlack.3" mt={4}>{edu.period}</Text>
+                <Text fw={500} fz="1.1rem" c="winterBlack.9">{t(`about-data.education.${edu.id}.degree`)}</Text>
+                <Text size="sm" c="winterBlack.5" mt={4}>{t(`about-data.education.${edu.id}.institution`)}</Text>
+                <Text ff="monospace" size="0.8rem" c="winterBlack.3" mt={4}>{t(`about-data.education.${edu.id}.period`)}</Text>
               </Box>
             ))}
 
