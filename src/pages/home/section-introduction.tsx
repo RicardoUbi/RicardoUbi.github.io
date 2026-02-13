@@ -1,6 +1,7 @@
 import { Title, Text, Stack, Button, Box, Image, SimpleGrid, Divider } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import profileImg from '../../assets/section-introduction-profile.png';
 
 export default function IntroductionSection() {
     const { t } = useTranslation();
@@ -10,7 +11,7 @@ export default function IntroductionSection() {
 
                 <Box style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
                     <Image
-                        src="src/assets/section-introduction-profile.png"
+                        src={profileImg}
                         alt="Ricardo Ubirajara"
                         style={{
                             width: '100%',
