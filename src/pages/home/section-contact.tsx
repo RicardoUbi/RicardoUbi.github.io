@@ -2,6 +2,7 @@ import { Box, Group, Stack, Text, UnstyledButton, Title, SimpleGrid, Flex } from
 import { IconBrandLinkedin, IconBrandGithub, IconFileDescription } from "@tabler/icons-react";
 import classes from './home.module.css';
 import { useTranslation } from "react-i18next";
+import CV_Ricardo_Ubi from '../../assets/files/CV_Ricardo_Ubirajara.pdf';
 
 export function ContactSection() {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ export function ContactSection() {
   const socialLinks = [
     { label: 'GitHub', href: 'https://github.com/ricardoubi', icon: IconBrandGithub },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/ricardoubi', icon: IconBrandLinkedin },
-    { label: t('contact-section.curriculum-cta'), href: '#', icon: IconFileDescription },
+    { label: t('contact-section.curriculum-cta'), href: CV_Ricardo_Ubi, icon: IconFileDescription },
   ];
 
   return (
