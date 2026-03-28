@@ -2,9 +2,12 @@ import { Title, Text, Stack, Box, Card, Group, ScrollArea, Image, Divider, Unsty
 import { IconArrowUpRight, IconArrowRight } from '@tabler/icons-react';
 import { PROJECTS } from '../../constants/projects-data';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function ProjectsSection() {
     const { t } = useTranslation();
+    const isMobile = useMediaQuery('(max-width: 768px)');
+
     return (
         <Box py="xl" mb="4rem">
             {/* Header unificado com o estilo de Documentos */}
@@ -39,13 +42,15 @@ export function ProjectsSection() {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            padding={0} // Removemos o padding para a imagem encostar no topo
+                            padding={0}
                             radius={0}
                             withBorder
                             bg="white"
                             style={{
                                 borderColor: 'var(--mantine-color-winterBlack-1)',
-                                flex: '0 0 380px',
+                                width: '100%',
+                                flex: isMobile ? '0 0 100%' : '0 0 380px',
+                                maxWidth: isMobile ? '320px' : '380px',
                                 textDecoration: 'none',
                                 transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
                                 '&:hover': {
@@ -56,11 +61,11 @@ export function ProjectsSection() {
                             }}
                         >
                             <Card.Section>
-                                <Box h={240} style={{ overflow: 'hidden', position: 'relative' }}>
+                                <Box h={isMobile ? 180 : 240} style={{ overflow: 'hidden', position: 'relative' }}>
                                     <Image
                                         src={project.image}
                                         alt={project.title}
-                                        height={240}
+                                        height={isMobile ? 180 : 240}
                                         fit="cover"
                                         style={{ filter: 'grayscale(0.2)', transition: '0.4s' }}
                                         className="project-image"
@@ -74,7 +79,9 @@ export function ProjectsSection() {
                                         <Text size="0.6rem" fw={900} tt="uppercase" lts="0.3em" c="winterBlack.2">
                                             {project.category}
                                         </Text>
-                                        <IconArrowUpRight size={14} stroke={1.5} color="var(--mantine-color-winterBlack-2)" />
+                                        {!isMobile &&
+                                            <IconArrowUpRight size={14} stroke={1.5} color="var(--mantine-color-winterBlack-2)" />
+                                        }
                                     </Group>
 
                                     <Title order={3} fw={400} fz="1.4rem" c="winterBlack.9" mt="xs">

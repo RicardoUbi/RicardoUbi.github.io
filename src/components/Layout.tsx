@@ -1,6 +1,6 @@
-import { Title, Text, Container, Group, Anchor, Popover, ActionIcon, Stack, Box, UnstyledButton, Burger, Drawer } from '@mantine/core';
+import { Title, Text, Container, Group, Anchor, Stack, Box, UnstyledButton, Burger, Drawer } from '@mantine/core';
 import '@mantine/core/styles.css';
-import { IconBriefcase, IconHome, IconNotebook, IconUser, IconWorld } from '@tabler/icons-react';
+import { IconBriefcase, IconHome, IconNotebook, IconUser } from '@tabler/icons-react';
 import { type ReactNode } from 'react';
 import classes from './Layout.module.css';
 import { Link, useLocation } from 'react-router-dom';
@@ -16,8 +16,6 @@ export default function Layout({ children }: LayoutProps) {
     const [opened, { toggle, close }] = useDisclosure(false);
     const isMobile = useMediaQuery('(max-width: 768px)');
     const location = useLocation();
-
-    const currentLanguage = i18n.language;
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
@@ -54,7 +52,7 @@ export default function Layout({ children }: LayoutProps) {
 
     return (
         <Box style={styles.root}>
-            <Box style={styles.header}>
+            <Box component="header" style={styles.header}>
                 <Group justify="space-between" style={{ width: '100%' }} wrap="nowrap">
                     <Anchor component={Link} to="/" style={{ textDecoration: 'none' }}>
                         <Title order={1} style={styles.logo}>
@@ -63,34 +61,21 @@ export default function Layout({ children }: LayoutProps) {
                     </Anchor>
 
                     <Group gap="md">
-                        <Popover position="bottom-end" shadow="md">
-                            <Popover.Target>
-                                <ActionIcon variant="subtle" size="lg" style={styles.iconButton}>
-                                    <IconWorld size={20} />
-                                </ActionIcon>
-                            </Popover.Target>
-                            <Popover.Dropdown style={styles.popover}>
-                                <Stack gap="xs">
-                                    {Object.values(languageOptions).map((option) => (
-                                        <UnstyledButton
-                                            key={option.value}
-                                            onClick={() => changeLanguage(option.value)}
-                                            style={{
-                                                // Verifica o idioma ativo para destacar
-                                                backgroundColor: currentLanguage.startsWith(option.value)
-                                                    ? 'var(--mantine-color-winterBlack-7)'
-                                                    : 'transparent',
-                                                padding: '8px',
-                                                borderRadius: '4px',
-                                                color: 'white'
-                                            }}
-                                        >
-                                            <Text size="sm" fw={500}>{option.label}</Text>
-                                        </UnstyledButton>
-                                    ))}
-                                </Stack>
-                            </Popover.Dropdown>
-                        </Popover>
+                        <Group gap="xs">
+                            {Object.values(languageOptions).map((lng) => (
+                                <UnstyledButton
+                                    key={lng.value}
+                                    onClick={() => changeLanguage(lng.value)}
+                                    style={{
+                                        ...styles.langButton,
+                                        opacity: i18n.language.startsWith(lng.value) ? 1 : 0.4,
+                                        borderBottom: i18n.language.startsWith(lng.value) ? '1px solid white' : 'none'
+                                    }}
+                                >
+                                    <Text size="xs" fw={700} c="white">{lng.value.toUpperCase()}</Text>
+                                </UnstyledButton>
+                            ))}
+                        </Group>
 
                         {isMobile && (
                             <Burger opened={opened} onClick={toggle} color="white" size="sm" />
@@ -111,7 +96,11 @@ export default function Layout({ children }: LayoutProps) {
                     )}
 
                     <Box style={styles.contentBackground}>
-                        <Container size="xl" style={styles.contentWrapper}>
+                        <Container size="xl"
+                            style={{
+                                ...styles.contentWrapper,
+                                padding: isMobile ? '2rem 1rem' : '4rem 3rem'
+                            }}                        >
                             {children}
                         </Container>
                     </Box>
@@ -177,6 +166,9 @@ const styles = {
         flexDirection: 'column' as const,
     },
     header: {
+        position: 'sticky' as const,
+        top: 0,
+        backgroundColor: 'var(--mantine-color-winterBlack-9)',
         padding: '1.5rem 2rem',
         display: 'flex',
         alignItems: 'center',
@@ -198,7 +190,6 @@ const styles = {
         minHeight: '60vh',
     },
     contentWrapper: {
-        padding: '4rem 3rem',
         width: '100%',
     },
     footer: {
@@ -217,5 +208,9 @@ const styles = {
     popover: {
         backgroundColor: 'var(--mantine-color-winterBlack-8)',
         border: '1px solid var(--mantine-color-winterBlack-7)',
+    },
+    langButton: {
+        padding: '4px 8px',
+        transition: 'opacity 0.2s ease'
     }
 };
