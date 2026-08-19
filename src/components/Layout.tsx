@@ -1,8 +1,7 @@
-import { Title, Text, Container, Group, Anchor, Stack, Box, UnstyledButton, Burger, Drawer, Menu, ActionIcon } from '@mantine/core';
+import { Title, Text, Container, Group, Anchor, Stack, Box, Burger, Drawer, Menu, ActionIcon } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { IconBriefcase, IconHome, IconNotebook, IconUser, IconWorld } from '@tabler/icons-react';
 import { type ReactNode } from 'react';
-import classes from './Layout.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
@@ -39,14 +38,6 @@ export default function Layout({ children }: LayoutProps) {
             : location.pathname.startsWith(item.href);
 
         return (
-            // <NavIcon
-            //     key={item.label}
-            //     icon={item.icon}
-            //     label={item.label}
-            //     active={isActive}
-            //     href={item.href}
-            //     onClick={close}
-            // />
             <Link
                 key={item.href || item.label}
                 to={item.href}
