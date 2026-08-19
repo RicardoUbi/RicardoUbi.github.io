@@ -40,7 +40,7 @@ export default function Documentos() {
             component="a"
             href={`/documentos/${doc.id}`}
             p="xl"
-            radius={0}
+            radius={'8px'}
             withBorder
             style={{
               backgroundColor: 'var(--mantine-color-white)',

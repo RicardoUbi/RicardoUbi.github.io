@@ -11,7 +11,7 @@
   },
   "introduction-section": {
     "role": "Software Developer",
-    "description": "Dedicado a criar soluções para transformar ideias em realidade. Focado em performance e experiência do usuário.",
+    "description": "Desenvolvo software com foco em manutenibilidade, design de sistemas e experiência do usuário.",
     "location": "Porto Alegre, RS",
     "cta": "Conecte-se"
   },
@@ -28,10 +28,9 @@
     "subtitle": "Vamos conversar?",
     "curriculum-cta": "Currículo"
   },
-  
   "about-page": {
     "title": "Sobre mim",
-    "subtitle": "Adoro criar soluções eficientes para problemas complexos. Minha paixão está em desenvolver ferramentas que resolvam problemas reais e impactem positivamente a vida de quem as utiliza. Acredito que um software cumpre seu papel quando é intuitivo e útil.",
+    "subtitle": "Minha paixão está em desenvolver ferramentas que resolvam problemas reais e impactem positivamente a vida de quem as utiliza. Acredito que um software cumpre seu papel quando é intuitivo e útil.",
     "experience-section-title": "Experiência",
     "education-section-title": "Educação",
     "skills-section-title": "Habilidades",
@@ -45,7 +44,6 @@
     "title": "Documentos e Notas",
     "search-placeholder": "Filtrar documentos..."
   },
-
   "projects-data": {
     "falcon-seguros": {
       "title": "Falcon Seguros: Seguro Viagem",
@@ -84,25 +82,24 @@
       "description": "Um shooter vertical clássico desenvolvido em C com Raylib para a UFRGS. Implementa persistência de dados binários, lógica modular e gerenciamento de estados de jogo."
     }
   },
-
   "about-data": {
     "experiences": {
       "colbiz": {
         "role": "Desenvolvedor de Software",
         "period": "Dez 2024 - O momento",
-        "description": "Atuação no ciclo completo de software, desde a concepção de novas aplicações até a manutenção evolutiva de sistemas legados. Foco em resolução de problemas complexos e implementação de funcionalidades escaláveis."
+        "description": "Atuação Full-Stack (Web, Mobile, Backend e Cloud) em todo o ciclo de vida de desenvolvimento. Responsável pela concepção de novas aplicações, evolução de sistemas legados, integração de serviços e resolução de incidentes críticos em ambientes de produção (C#, .NET, Node.js, React, PostgreSQL, AWS)."
       },
       "fadema": {
-        "role": "Desenvolvedor Bolsista",
+        "role": "Estagiário de Desenvolvimento de Software",
         "period": "Mai 2023 - Nov 2023",
-        "description": "Automação de tradução de software utilizando Python, Selenium e integração com Google Sheets."
+        "description": "Automação do processo de internacionalização de softwares no programa IF Mais Empreendedor. Desenvolvimento de solução em nuvem (Python, BeautifulSoup, Selenium e gspread) para mapeamento de telas e tradução integrada ao Google Sheets, contornando limitações de infraestrutura local."
       }
     },
     "education": {
       "ufrgs": {
         "institution": "UFRGS - Universidade Federal do Rio Grande do Sul",
-        "degree": "Ciência da Computação",
-        "period": "Em andamento"
+        "degree": "Bacharelado em Ciência da Computação",
+        "period": "2025 - Em andamento"
       },
       "ifsul": {
         "institution": "IFSUL - Instituto Federal Sul-rio-grandense",

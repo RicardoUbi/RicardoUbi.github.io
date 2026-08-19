@@ -49,7 +49,7 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               padding={0}
-              radius={0}
+              radius={'8px'}
               withBorder
               bg="white"
               style={{

@@ -1,6 +1,6 @@
-import { Title, Text, Container, Group, Anchor, Stack, Box, UnstyledButton, Burger, Drawer } from '@mantine/core';
+import { Title, Text, Container, Group, Anchor, Stack, Box, UnstyledButton, Burger, Drawer, Menu, ActionIcon } from '@mantine/core';
 import '@mantine/core/styles.css';
-import { IconBriefcase, IconHome, IconNotebook, IconUser } from '@tabler/icons-react';
+import { IconBriefcase, IconHome, IconNotebook, IconUser, IconWorld } from '@tabler/icons-react';
 import { type ReactNode } from 'react';
 import classes from './Layout.module.css';
 import { Link, useLocation } from 'react-router-dom';
@@ -39,14 +39,29 @@ export default function Layout({ children }: LayoutProps) {
             : location.pathname.startsWith(item.href);
 
         return (
-            <NavIcon
-                key={item.label}
-                icon={item.icon}
-                label={item.label}
-                active={isActive}
-                href={item.href}
+            // <NavIcon
+            //     key={item.label}
+            //     icon={item.icon}
+            //     label={item.label}
+            //     active={isActive}
+            //     href={item.href}
+            //     onClick={close}
+            // />
+            <Link
+                key={item.href || item.label}
+                to={item.href}
                 onClick={close}
-            />
+                style={{
+                    padding: '4px 8px',
+                    paddingBottom: isActive ? '1px' : '2px',
+                    color: "white",
+                    opacity: isActive ? 1 : 0.7,
+                    textDecoration: 'none',
+                    borderBottom: isActive ? '1px solid white' : 'none'
+                }}
+            >
+                {item.label}
+            </Link>
         );
     });
 
@@ -61,21 +76,37 @@ export default function Layout({ children }: LayoutProps) {
                     </Anchor>
 
                     <Group gap="md">
-                        <Group gap="xs">
-                            {Object.values(languageOptions).map((lng) => (
-                                <UnstyledButton
-                                    key={lng.value}
-                                    onClick={() => changeLanguage(lng.value)}
-                                    style={{
-                                        ...styles.langButton,
-                                        opacity: i18n.language.startsWith(lng.value) ? 1 : 0.4,
-                                        borderBottom: i18n.language.startsWith(lng.value) ? '1px solid white' : 'none'
-                                    }}
-                                >
-                                    <Text size="xs" fw={700} c="white">{lng.value.toUpperCase()}</Text>
-                                </UnstyledButton>
-                            ))}
-                        </Group>
+                        {!isMobile && (
+                            <Group>
+                                {renderNavItems()}
+                            </Group>
+                        )}
+
+                        <Menu shadow="md" width={150} position="bottom-end">
+                            <Menu.Target>
+                                <ActionIcon variant="transparent" color="white" size="lg">
+                                    <IconWorld size={20} />
+                                    <Text size="xs" fw={700} ml={6}>
+                                        {i18n.language.substring(0, 2).toUpperCase()}
+                                    </Text>
+                                </ActionIcon>
+                            </Menu.Target>
+
+                            <Menu.Dropdown>
+                                {Object.values(languageOptions).map((lng) => {
+                                    const isActive = i18n.language.startsWith(lng.value);
+                                    return (
+                                        <Menu.Item
+                                            key={lng.value}
+                                            onClick={() => changeLanguage(lng.value)}
+                                            style={{ fontWeight: isActive ? 'bold' : 'normal' }}
+                                        >
+                                            {lng.label}
+                                        </Menu.Item>
+                                    );
+                                })}
+                            </Menu.Dropdown>
+                        </Menu>
 
                         {isMobile && (
                             <Burger opened={opened} onClick={toggle} color="white" size="sm" />
@@ -89,12 +120,6 @@ export default function Layout({ children }: LayoutProps) {
                     width: isMobile ? '95%' : '80%',
                     maxWidth: '72rem'
                 }}>
-                    {!isMobile && (
-                        <Group justify="end" gap={0} style={{ width: '100%' }}>
-                            {renderNavItems()}
-                        </Group>
-                    )}
-
                     <Box style={styles.contentBackground}>
                         <Container size="xl"
                             style={{
@@ -134,29 +159,6 @@ export default function Layout({ children }: LayoutProps) {
     );
 }
 
-function NavIcon({ icon: Icon, label, href, active, onClick }: any) {
-    return (
-        <UnstyledButton
-            component={Link}
-            to={href}
-            onClick={onClick}
-            className={`${classes.navButton} ${active ? classes.active : ''}`}
-            style={{
-                padding: '12px 20px',
-                borderBottom: active && !window.matchMedia('(max-width: 768px)').matches
-                    ? '2px solid white'
-                    : 'none'
-            }}
-        >
-            <Group gap="sm">
-                <Icon size={18} />
-                <Text size={"0.8rem"} fw={700} tt="uppercase" lts="0.1em">
-                    {label}
-                </Text>
-            </Group>
-        </UnstyledButton>
-    );
-}
 
 const styles = {
     root: {
@@ -188,6 +190,8 @@ const styles = {
     contentBackground: {
         backgroundColor: 'var(--mantine-color-winterBlack-0)',
         minHeight: '60vh',
+        //border: '4px solid blue',
+        borderRadius: '8px'
     },
     contentWrapper: {
         width: '100%',

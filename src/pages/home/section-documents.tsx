@@ -31,7 +31,7 @@ export function DocumentsSection() {
                         href={`/documentos/${doc.id}`}
                         withBorder
                         p="xl"
-                        radius={0}
+                        radius={'8px'}
                         bg="var(--mantine-color-white)"
                         style={{
                             borderColor: 'var(--mantine-color-winterBlack-1)',

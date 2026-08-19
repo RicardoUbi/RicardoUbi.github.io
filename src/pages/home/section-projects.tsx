@@ -43,7 +43,7 @@ export function ProjectsSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             padding={0}
-                            radius={0}
+                            radius={'8px'}
                             withBorder
                             bg="white"
                             style={{
@@ -125,7 +125,7 @@ export function ProjectsSection() {
                             w={{ base: '100%', sm: 'auto' }}
                             mt="xl"
                             color="winterBlack.9"
-                            radius={0}
+                            radius={'8px'}
                             component="a"
                             href="/portfolio"
                             rightSection={<IconArrowRight size={16} />}

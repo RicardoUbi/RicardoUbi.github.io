@@ -19,7 +19,7 @@ export default function IntroductionSection() {
                             height: '100%',
                             maxHeight: '427px',
                             zIndex: 1,
-                            // filter: 'grayscale(100%)' 
+                            borderRadius: '6px'
                         }}
                     />
                 </Box>
@@ -77,7 +77,7 @@ export default function IntroductionSection() {
                         variant="outline"
                         color="winterBlack.9"
                         size="lg"
-                        radius={0}
+                        radius={'25px'}
                         rightSection={<IconArrowRight size={18} />}
                         styles={{
                             root: {

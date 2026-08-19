@@ -11,7 +11,7 @@
   },
   "introduction-section": {
     "role": "Software Developer",
-    "description": "Dedicated to building solutions that turn ideas into reality. Focused on performance and user experience.",
+    "description": "I build software with a focus on maintainability, system design, and user experience.",
     "location": "Porto Alegre, Brazil",
     "cta": "Get in touch"
   },
@@ -30,7 +30,7 @@
   },
   "about-page": {
     "title": "About Me",
-    "subtitle": "I love creating efficient solutions for complex problems. I'm passionate about developing tools that solve real-world issues and make a positive impact on people's lives. I believe software truly fulfills its purpose when it’s both intuitive and useful.",
+    "subtitle": "I'm passionate about developing tools that solve real-world issues and make a positive impact on people's lives. I believe software truly fulfills its purpose when it’s both intuitive and useful.",
     "experience-section-title": "Experience",
     "education-section-title": "Education",
     "skills-section-title": "Skills",
@@ -44,7 +44,6 @@
     "title": "Documents and Notes",
     "search-placeholder": "Filter documents..."
   },
-
   "projects-data": {
     "falcon-seguros": {
       "title": "Falcon Seguros: Travel Insurance",
@@ -83,29 +82,28 @@
       "description": "A classic vertical shooter developed in C with Raylib for UFRGS. Implements binary data persistence, modular logic, and game state management."
     }
   },
-
   "about-data": {
     "experiences": {
       "colbiz": {
         "role": "Software Developer",
         "period": "Dec 2024 - Present",
-        "description": "Working across the full software development lifecycle, from designing new applications to the evolutionary maintenance of legacy systems. Focused on solving complex problems and implementing scalable features."
+        "description": "Full-Stack development (Web, Mobile, Backend, and Cloud) across the entire software development lifecycle. Responsible for designing new applications, evolving legacy systems, integrating services, and resolving critical production incidents (C#, .NET, Node.js, React, PostgreSQL, AWS)."
       },
       "fadema": {
-        "role": "Scholarship Developer",
+        "role": "Software Developer Intern",
         "period": "May 2023 - Nov 2023",
-        "description": "Software translation automation using Python, Selenium, and integration with Google Sheets."
+        "description": "Automation of the software internationalization process within the IF Mais Empreendedor program. Development of a cloud-based solution (Python, BeautifulSoup, Selenium, and gspread) for UI mapping and automated translation integrated with Google Sheets, bypassing local infrastructure limitations."
       }
     },
     "education": {
       "ufrgs": {
         "institution": "UFRGS - Federal University of Rio Grande do Sul",
-        "degree": "Computer Science",
-        "period": "In progress"
+        "degree": "Bachelor's Degree in Computer Science",
+        "period": "2025 - Present"
       },
       "ifsul": {
-        "institution": "IFSUL - Sul-Rio-Grandense Federal Institute",
-        "degree": "Mechanical Technician",
+        "institution": "IFSUL - Federal Institute of Rio Grande do Sul",
+        "degree": "Technical Degree in Mechanical Engineering",
         "period": "2020 - 2024"
       }
     }
